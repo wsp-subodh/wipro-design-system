@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WSP CSS -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Layout :: WSP-Design System</title>
+
+</head>
+
+<body>
+  <div class="wsp-wrapper">
+    <!-- Header starts -->
+    <header>
+      <div class="header wsp-fixed-top">
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+              <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                <div class="wsp-logo-wrapper">
+                  <span class="wsp-logo-icon">
+                    <i class="wsp-icon wsp-icon-layers-o"></i>
+                  </span>
+                  <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Main content starts -->
+    <div class="wsp-content wsp-d-flex">
+      <!-- side-bar starts -->
+      <div class="wsp-nav-wrap" id="sideBar">
+        <my-sidebar></my-sidebar>
+      </div>
+      <!-- side-bar ends -->
+      <div class="wsp-content-wrap" id="mainContent">
+        <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+          <span class="toggle-bar"></span>
+        </span>
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col">
+              <h1>Layout</h1>
+              <p class="wsp-intro">Utilize our incredible portable first flexbox grid to build designs, all things considered, and measures because of a twelve column system, six default responsive levels, Sass factors and mixins, and many predefined classes.</p>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Example</h3>
+                <p>wsp design system's grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+                </p>
+                <div class="demo">
+                  <div class="wsp-container-fluid">
+                    <div class="wsp-row">
+                      <div class="wsp-col">
+                        Column
+                      </div>
+                      <div class="wsp-col">
+                        Column
+                      </div>
+                      <div class="wsp-col">
+                        Column
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(gridExample)">
+                    Copy
+                  </span>
+                  <code id="gridExample" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-container-fluid"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-row"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-col"</span>&gt; Column &lt;/div&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-col"</span>&gt; Column &lt;/div&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-col"</span>&gt; Column &lt;/div&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                      &lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Grid options</h3>
+                <p>wsp design system's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follow:</p>
+                <ul>
+                  <li>Extra small (xs)</li>
+                  <li>Small (sm)</li>
+                  <li>Medium (md)</li>
+                  <li>Large (lg)</li>
+                  <li>Extra large (xl)</li>
+                  <li>Extra extra large (xxl)</li>
+                  </ul>
+                  <p>
+                    As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here’s how the grid changes across these breakpoints:
+                  </p>
+                <div class="demo">
+                  <div class="wsp-table-responsive">
+                    <table class="wsp-table wsp-table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col">
+                            xs<br>
+                            <span>&lt;576px</span>
+                          </th>
+                          <th scope="col">
+                            sm<br>
+                            <span>≥576px</span>
+                          </th>
+                          <th scope="col">
+                            md<br>
+                            <span >≥768px</span>
+                          </th>
+                          <th scope="col">
+                            lg<br>
+                            <span >≥992px</span>
+                          </th>
+                          <th scope="col">
+                            xl<br>
+                            <span>≥1200px</span>
+                          </th>
+                          <th scope="col">
+                            xxl<br>
+                            <span>≥1400px</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th class="wsp-text-nowrap" scope="row">Container <code >max-width</code></th>
+                          <td>None (auto)</td>
+                          <td>540px</td>
+                          <td>720px</td>
+                          <td>960px</td>
+                          <td>1140px</td>
+                          <td>1320px</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row">Class prefix</th>
+                          <td><span class="wsp-cls-name">.wsp-col-</span></td>
+                          <td><span class="wsp-cls-name">.wsp-col-sm-</span></td>
+                          <td><span class="wsp-cls-name">.wsp-col-md-</span></td>
+                          <td><span class="wsp-cls-name">.wsp-col-lg-</span></td>
+                          <td><span class="wsp-cls-name">.wsp-col-xl-</span></td>
+                          <td><span class="wsp-cls-name">.wsp-col-xxl-</span></td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row"># of columns</th>
+                          <td colspan="6">12</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row">Gutter width</th>
+                          <td colspan="6">1.5rem (.75rem on left and right)</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row">Custom gutters</th>
+                          <td colspan="6">Yes</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row">Nestable</th>
+                          <td colspan="6">Yes</td>
+                        </tr>
+                        <tr>
+                          <th class="text-nowrap" scope="row">Column ordering</th>
+                          <td colspan="6">Yes</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content ends -->
+  </div>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/page.js"></script>
+</body>
+
+</html>
