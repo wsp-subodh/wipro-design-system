@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WSP CSS -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Badge:: WSP-Design System</title>
+</head>
+
+<body>
+  <div class="wsp-wrapper">
+    <!-- Header starts -->
+    <header>
+      <div class="header wsp-fixed-top">
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+              <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                <div class="wsp-logo-wrapper">
+                  <span class="wsp-logo-icon">
+                    <i class="wsp-icon wsp-icon-layers-o"></i>
+                  </span>
+                  <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Main content starts -->
+    <div class="wsp-content wsp-d-flex">
+      <!-- side-bar starts -->
+      <div class="wsp-nav-wrap" id="sideBar">
+        <my-sidebar></my-sidebar>
+      </div>
+      <!-- side-bar ends -->
+      <div class="wsp-content-wrap" id="mainContent">
+        <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+          <span class="toggle-bar"></span>
+        </span>
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col">
+              <h1>Badges</h1>
+              <p>Using the contextual <span class="wsp-cls-name">.wsp-badge-*</span> classes on an <label> element quickly provide contextual badges.</p>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Example</h3>
+                <div class="demo">
+                  <span class="wsp-badge badge-inactive">25</span>
+                  <span class="wsp-badge badge-primary">25</span>
+                  <span class="wsp-badge badge-success">+25</span>
+                  <span class="wsp-badge badge-danger">-25</span>
+                  <span class="wsp-badge badge-info">25</span>
+                  <span class="wsp-badge badge-warning">25</span>
+                  <span class="wsp-badge badge-light-success">+25</span>
+                  <span class="wsp-badge badge-light-danger">-25</span>
+                  <span class="wsp-badge badge-light-info">25</span>
+                  <span class="wsp-badge badge-light-warning">25</span>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(badges)">
+                    Copy</span>
+                  <code id="badges" class="language-html">
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-inactive"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-primary"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-success"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-danger"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-info"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-warning"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-light-success"</span>&gt;+25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-light-danger"</span>&gt;-25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-light-infoo"</span>&gt;25&lt;/span&gt;<br/>
+                    &lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-badge badge-light-warning"</span>&gt;25&lt;/span&gt;
+                </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main content ends -->
+  </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/page.js"></script>
+</body>
+
+</html>

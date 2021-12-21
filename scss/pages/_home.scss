@@ -1,0 +1,219 @@
+.header {
+    background: $primary;
+    padding: 0.63rem 0;
+    height: 3.5rem;
+
+    .logo {
+        .wsp-logo-wrapper {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .wsp-logo-icon {
+                font-size: 1.5rem;
+                color: $white;
+                padding-right: 0.5rem;
+            }
+        }
+
+    }
+}
+
+.wsp-content {
+    padding-top: 3.5rem;
+
+    .wsp-nav-wrap {
+        background: $white;
+        border-right: $border-width solid $border-color;
+        width: 20rem;
+        min-height: calc(100vh - 3.5rem);
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 3.5rem;
+        display: block;
+        z-index: $zindex-fixed;
+        .wsp-navbar-vertical{
+            max-height: calc(100vh - 70px);
+            overflow: auto;
+        }
+    }
+
+    .wsp-content-wrap {
+        width: 100%;
+        overflow-x: hidden;
+        background: $white;
+        min-height: calc(100vh - 3.5rem);
+        position: relative;
+        transition: all 0.4s ease;
+        margin-left: 20rem;
+
+        &.has-sidebar {
+            margin-left: 0rem;
+        }
+
+        .toggle-wrap {
+            position: fixed;
+            cursor: pointer;
+            color: $white;
+            top: 10px;
+            z-index: 1050;
+            display: none;
+            right: 1rem;
+            top: 1rem;
+        }
+
+        .toggle-bar,
+        .toggle-bar::before,
+        .toggle-bar::after,
+        .toggle-wrap.active .toggle-bar,
+        .toggle-wrap.active .toggle-bar::before,
+        .toggle-wrap.active .toggle-bar::after {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .toggle-bar {
+            width: 35px;
+            margin: 10px 0;
+            position: relative;
+            border-top: 4px solid $white;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .toggle-bar::before,
+        .toggle-bar::after {
+            content: "";
+            display: block;
+            background: $white;
+            height: 4px;
+            width: 35px;
+            border-radius: 4px;
+            position: absolute;
+            top: -12px;
+            transform: rotate(0deg);
+            transform-origin: 11%;
+        }
+
+        .toggle-bar::after {
+            top: 4px;
+        }
+
+        &.wsp-home-wrap {
+            background: initial;
+        }
+
+        .wsp-banner {
+            background: url(../../images/wsp-bg-banner.png) no-repeat;
+            background-size: cover;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $primary;
+                opacity: .8;
+            }
+
+            .wsp-row {
+                align-items: center;
+            }
+
+            .wsp-banner-logo {
+                padding: 3.5rem 1.875rem;
+
+                .wsp-logo-icon {
+                    font-size: 2rem;
+                    line-height: 1rem;
+                    color: $white;
+                }
+            }
+
+            .wsp-info-wrap {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                padding-top: 7rem;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .wsp-card-wrap {
+            padding: 1.875rem;
+
+            .wsp-card {
+                text-align: center;
+                background: $white;
+                border-radius: 4px;
+                padding: 0.9375rem;
+                box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+                width: auto;
+                .wsp-card-icon {
+                    .wsp-icon {
+                        color: $primary;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+
+        .wsp-get-start {
+            padding: 1.875rem;
+            @include wsp-flex-center;
+            column-gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #sideBar {
+        display: none;
+        width: 100%;
+        border-right: 0;
+    }
+
+    .wsp-content .wsp-content-wrap {
+        margin-left: 0;
+    }
+
+    .wsp-content .wsp-content-wrap .toggle-wrap {
+        display: block;
+    }
+
+    .wsp-content .wsp-content-wrap .wsp-banner .wsp-banner-logo {
+        padding: 1rem;
+    }
+
+    .wsp-content .wsp-content-wrap .wsp-banner .wsp-info-wrap {
+        padding: 0 1rem;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .wsp-content .wsp-content-wrap .wsp-card-wrap .wsp-card {
+        margin-bottom: 1rem;
+    }
+}
+@media (min-width: 769px) {
+    #sideBar {
+        display: block !important;
+    }
+}
+@media (max-width: 1200px) {
+    .wsp-card-wrap{
+        .wsp-card{
+            margin-bottom: 1rem;
+        }
+    }
+    .wsp-info-wrap{
+        padding-top: 0 !important;
+    }
+}

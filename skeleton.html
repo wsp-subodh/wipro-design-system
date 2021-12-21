@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WSP CSS -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Skeleton :: WSP-Design System</title>
+</head>
+
+<body>
+  <div class="wsp-wrapper">
+    <!-- Header starts -->
+    <header>
+      <div class="header wsp-fixed-top">
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+              <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                <div class="wsp-logo-wrapper">
+                  <span class="wsp-logo-icon">
+                    <i class="wsp-icon wsp-icon-layers-o"></i>
+                  </span>
+                  <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Main content starts -->
+    <div class="wsp-content wsp-d-flex">
+        <!-- side-bar starts -->
+        <div class="wsp-nav-wrap" id="sideBar">
+          <my-sidebar></my-sidebar>
+        </div>
+        <!-- side-bar ends -->
+      <div class="wsp-content-wrap" id="mainContent">
+        <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+          <span class="toggle-bar"></span>
+        </span>
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col">
+              <h1>Skeleton</h1>
+              <p>Skeleton screens are something that you might have seen the UI element’s skeleton was loaded beforehand
+                and then the content was lazy loaded one after the other. This offers a great way to show visitors the
+                page is loading content and also gives them an indication of what to expect when it loads. Skeleton
+                screens are another way to focus on progress instead of progress bar and preloaders.</p>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Circle</h3>
+                <div class="demo">
+                  <div class="wsp-ssc-circle"></div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(circleSkeleton)">
+                    Copy
+                  </span>
+                  <code id="circleSkeleton" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-circle"</span>&gt;&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Head-line</h3>
+                <div class="demo">
+                  <div class="wsp-ssc-head-line"></div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(headLineSkeleton)">
+                    Copy
+                  </span>
+                  <code id="headLineSkeleton" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-head-line"</span>&gt;&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Square</h3>
+                <div class="demo">
+                  <div class="wsp-ssc-square"></div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(squareSkeleton)">
+                    Copy
+                  </span>
+                  <code id="squareSkeleton" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-square"</span>&gt;&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Rectangle</h3>
+                <div class="demo">
+                  <div class="wsp-ssc-rectangle"></div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(rectangleSkeleton)">
+                    Copy
+                  </span>
+                  <code id="rectangleSkeleton" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-rectangle"</span>&gt;&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Card</h3>
+                <div class="demo">
+                  <div class="wsp-ssc-card">
+                    <div class="wsp-ssc-wrapper">
+                      <div class="wsp-ssc-square"></div>
+                    </div>
+                    <div class="wsp-ssc-hr"></div>
+                    <div class="wsp-ssc-wrapper">
+                      <div class="wsp-ssc-line w-60 mb"></div>
+                      <div class="wsp-ssc-line w-60 mb"></div>
+                      <div class="wsp-ssc-line w-60 mb"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(cardSkeleton)">
+                    Copy
+                  </span>
+                  <code id="cardSkeleton" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-card"</span>&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-wrapper"</span>&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-square"</span>&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-hr"</span>&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-wrapper"</span>&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-line w-60 mb"</span>&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-line w-60 mb"</span>&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ssc-line w-60 mb"</span>&gt;&lt;/div&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                    &lt;/div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content ends -->
+  </div>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/page.js"></script>
+</body>
+
+</html>

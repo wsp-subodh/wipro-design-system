@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- WSP CSS -->
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Table:: WSP-Design System</title>
+</head>
+
+<body>
+    <div class="wsp-wrapper">
+        <!-- Header starts -->
+        <header>
+            <div class="header wsp-fixed-top">
+                <div class="wsp-container-fluid">
+                    <div class="wsp-row">
+                        <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+                            <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                                <div class="wsp-logo-wrapper">
+                                    <span class="wsp-logo-icon">
+                                        <i class="wsp-icon wsp-icon-layers-o"></i>
+                                    </span>
+                                    <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header ends -->
+
+        <!-- Main content starts -->
+        <div class="wsp-content wsp-d-flex">
+            <!-- side-bar starts -->
+            <div class="wsp-nav-wrap" id="sideBar">
+                <my-sidebar></my-sidebar>
+            </div>
+            <!-- side-bar ends -->
+            <div class="wsp-content-wrap" id="mainContent">
+                <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+                    <span class="toggle-bar"></span>
+                </span>
+                <div class="wsp-container-fluid">
+                    <div class="wsp-row">
+                        <div class="wsp-col">
+                            <h1>Table</h1>
+                            <p>Just add the base class <span class="wsp-cls-name">.wsp-table</span> to any
+                                &lt;table&gt;,
+                                then extend with custom styles or
+                                our various included modifier classes.</p>
+                            <p>
+                                Using the most basic table markup, here’s how basic tables look in WSP design system.
+                            </p>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Example</h3>
+                                <div class="demo">
+                                    <table class="wsp-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(table)">Copy</span>
+                                    <code id="table" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+                            </div>
+
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Striped rows</h3>
+                                <p>Use <span class="wsp-cls-name">.wsp-table-striped </span>to add zebra-striping to any
+                                    table row within the <tbody>.</p>
+                                <div class="demo">
+                                    <table class="wsp-table wsp-table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableStriped)">Copy</span>
+                                    <code id="tableStriped" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table wsp-table-striped"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Dark Header Table</h3>
+                                <p>Use <span class="wsp-cls-name">.wsp-table-dark-header </span>to add dark header to
+                                    any
+                                    table header.</p>
+                                <div class="demo">
+                                    <table class="wsp-table wsp-table-dark-header">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableDarkHeader)">Copy</span>
+                                    <code id="tableDarkHeader" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table wsp-table-dark-header"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Bordered Table</h3>
+                                <p>Add <span class="wsp-cls-name">.table-bordered </span>for borders on all sides of the
+                                    table and cells.</p>
+                                <div class="demo">
+                                    <table class="wsp-table wsp-table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableBordered)">Copy</span>
+                                    <code id="tableBordered" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table wsp-table-bordered"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Borderless Table</h3>
+                                <p>Add <span class="wsp-cls-name">.wsp-table-borderless</span> for a table without
+                                    borders.</p>
+                                <div class="demo">
+                                    <table class="wsp-table wsp-table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableBorderless)">Copy</span>
+                                    <code id="tableBorderless" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table wsp-table-borderless"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Small Table</h3>
+                                <p>Add <span class="wsp-cls-name">.wsp-table-sm</span> for a table without borders.</p>
+                                <div class="demo">
+                                    <table class="wsp-table wsp-table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Header 1</th>
+                                                <th>Header 2</th>
+                                                <th>Header 3</th>
+                                                <th>Header 4</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</th>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableSmall)">Copy</span>
+                                    <code id="tableSmall" class="language-html">
+                                        &lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table wsp-table-sm"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 4&lt;/th&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Text&lt;/td&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br>
+                                        &lt;/table&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h3>Responsive Table</h3>
+                                <p>
+                                    Across every breakpoint, use <span class="wsp-cls-name">.wsp-table-responsive</span>
+                                    for horizontally scrolling tables.
+                                </p>
+                                <div class="demo">
+                                    <div class="wsp-table-responsive">
+                                        <table class="wsp-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Header 1</th>
+                                                    <th>Header 2</th>
+                                                    <th>Header 3</th>
+                                                    <th>Header 4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Text</th>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Text</th>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Text</th>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                    <td>Text</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(tableResponsive)">Copy</span>
+                                    <code id="tableResponsive" class="language-html">
+                                        &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table-responsive"</span>&gt;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;table <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-table"</span>&gt;<br>
+                                        
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;<br>
+                                        &lt;/div&gt;
+                                    </code>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main content ends -->
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- WSP CSS -->
+  <link href="css/font.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Alert :: WSP-Design System</title>
+
+</head>
+
+<body>
+  <div class="wsp-wrapper">
+    <!-- Header starts -->
+    <header>
+      <div class="header wsp-fixed-top">
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+              <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                <div class="wsp-logo-wrapper">
+                  <span class="wsp-logo-icon">
+                    <i class="wsp-icon wsp-icon-layers-o"></i>
+                  </span>
+                  <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Main content starts -->
+    <div class="wsp-content wsp-d-flex">
+      <!-- side-bar starts -->
+      <div class="wsp-nav-wrap" id="sideBar">
+        <my-sidebar></my-sidebar>
+      </div>
+      <!-- side-bar ends -->
+      <div class="wsp-content-wrap" id="mainContent">
+        <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+          <span class="toggle-bar"></span>
+        </span>
+        <div class="wsp-container-fluid">
+          <div class="wsp-row">
+            <div class="wsp-col">
+              <h1>Alert</h1>
+              <p>Alert message are available for any length of text, as well as an dismissable cta. For
+                proper styling, use one of the required contextual classes.</p>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Info Alert Message</h3>
+                <p>For info alert proper styling, use required contextual class <span class="wsp-cls-name">.wsp-alert-info</span></p>
+                <div class="demo">
+                  <div class="wsp-alert wsp-alert-info">                   
+                    <span class="wsp-alert-icon">
+                      <i class="wsp-icon wsp-icon-info-circle"></i>
+                    </span>
+                    <h6 class="wsp-alert-heading">Section Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.</p>
+                    <a href="javascript:void();" class="wsp-close">
+                      <i class="wsp-icon wsp-icon-x-small"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(infoAlert)">
+                    Copy
+                  </span>
+                  <code id="infoAlert" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert wsp-alert-info"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert-icon"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-info-circle"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h6 <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-section-heading"</span>&gt;Alert Title&lt;/h6&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.&lt;/p&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-close"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-x-small"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+                      &lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Success Alert Message</h3>
+                <p>For success alert proper styling, use required contextual class <span
+                    class="wsp-cls-name">.wsp-alert-success</span></p>
+                <div class="demo">
+                  <div class="wsp-alert wsp-alert-success">                   
+                    <span class="wsp-alert-icon">
+                      <i class="wsp-icon wsp-icon-tick-circle"></i>
+                    </span>
+                    <h6 class="wsp-alert-heading">Section Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.</p>
+                    <a href="javascript:void();" class="wsp-close">
+                      <i class="wsp-icon wsp-icon-x-small"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(successAlert)">
+                    Copy
+                  </span>
+                  <code id="successAlert" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert wsp-alert-success"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert-icon"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-tick-circle"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h6 <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-section-heading"</span>&gt;Alert Title&lt;/h6&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.&lt;/p&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-close"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-x-small"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+                      &lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Warning Alert Message</h3>
+                <p>For warning alert proper styling, use required contextual class <span
+                    class="wsp-cls-name">.wsp-alert-warning</span></p>
+                <div class="demo">
+                  <div class="wsp-alert wsp-alert-warning">                   
+                    <span class="wsp-alert-icon">
+                      <i class="wsp-icon wsp-icon-exclamation-circle-o"></i>
+                    </span>
+                    <h6 class="wsp-alert-heading">Section Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.</p>
+                    <a href="javascript:void();"  class="wsp-close">
+                      <i class="wsp-icon wsp-icon-x-small"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(warningAlert)">
+                    Copy
+                  </span>
+                  <code id="warningAlert" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert wsp-alert-warning"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert-icon"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-exclamation-circle-o"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h6 <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-section-heading"</span>&gt;Alert Title&lt;/h6&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.&lt;/p&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-close"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-x-small"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+                      &lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              <div class="ex-wrapper wsp-mb-5">
+                <h3>Danger Alert Message</h3>
+                <p>For danger alert proper styling, use required contextual class <span
+                    class="wsp-cls-name">.wsp-alert-danger</span></p>
+                <div class="demo">
+                  <div class="wsp-alert wsp-alert-danger">                   
+                    <span class="wsp-alert-icon">
+                      <i class="wsp-icon wsp-icon-error"></i>
+                    </span>
+                    <h6 class="wsp-alert-heading">Section Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.</p>
+                    <a href="javascript:void();"  class="wsp-close">
+                      <i class="wsp-icon wsp-icon-x-small"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(dangerAlert)">
+                    Copy
+                  </span>
+                  <code id="dangerAlert" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert wsp-alert-danger"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-alert-icon"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-error"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h6 <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-section-heading"</span>&gt;Alert Title&lt;/h6&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur eros ac molestie sagittis.&lt;/p&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-close"</span>&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-icon wsp-icon-x-small"</span>&gt;&lt;/i&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br>
+                      &lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main content ends -->
+  </div>
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/page.js"></script>
+</body>
+
+</html>
