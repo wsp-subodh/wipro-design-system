@@ -9684,7 +9684,7 @@ input::-moz-focus-outer {
   margin-bottom: 0.825rem;
 }
 
-.ex-wrapper ul li {
+.ex-wrapper ul.layout-list li {
   list-style: disc;
 }
 /*# sourceMappingURL=main.css.map */
