@@ -5,6 +5,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fevicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
   <!-- WSP CSS -->
   <link href="css/font.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
@@ -36,11 +41,11 @@
 
     <!-- Main content starts -->
     <div class="wsp-content wsp-d-flex">
-        <!-- side-bar starts -->
-        <div class="wsp-nav-wrap" id="sideBar">
-          <my-sidebar></my-sidebar>
-        </div>
-        <!-- side-bar ends -->
+      <!-- side-bar starts -->
+      <div class="wsp-nav-wrap" id="sideBar">
+        <my-sidebar></my-sidebar>
+      </div>
+      <!-- side-bar ends -->
       <div class="wsp-content-wrap" id="mainContent">
         <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
           <span class="toggle-bar"></span>
@@ -53,7 +58,8 @@
                 quickly provide contextual select.</p>
               <div class="ex-wrapper wsp-mb-5">
                 <h3>Form controls</h3>
-                <p>Textual form controls—like <b>&lt;select&gt;</b>s, are styled with the <span class="wsp-cls-name">.wsp-form-control</span>
+                <p>Textual form controls—like <b>&lt;select&gt;</b>s, are styled with the <span
+                    class="wsp-cls-name">.wsp-form-control</span>
                   class. Included are styles for general appearance, focus state, sizing, and more.
                 </p>
                 <div class="demo">
@@ -129,16 +135,16 @@
                 <p>Add the <span class="wsp-cls-name">Disabled</span> boolean attribute on an input to prevent
                   modification of the input’s value. </p>
                 <div class="demo">
-                    <div class="wsp-form-group">
-                        <label for="exampleFormControlSelect1">Example select</label>
-                        <select class="wsp-form-control" id="exampleFormControlSelect1" disabled>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                        </select>
-                      </div>
+                  <div class="wsp-form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="wsp-form-control" id="exampleFormControlSelect1" disabled>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(disabled)">
@@ -165,20 +171,20 @@
                   <span class="wsp-cls-name">.is-valid</span>.
                 </p>
                 <div class="demo">
-                    <select class="wsp-form-control is-valid">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                      <select class="wsp-form-control is-invalid">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                  <select class="wsp-form-control is-valid">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <select class="wsp-form-control is-invalid">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(inputVarient)">

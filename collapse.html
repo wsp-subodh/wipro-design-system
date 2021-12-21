@@ -5,6 +5,11 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fevicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
   <!-- WSP CSS -->
   <link href="css/font.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
@@ -36,11 +41,11 @@
 
     <!-- Main content starts -->
     <div class="wsp-content wsp-d-flex">
-        <!-- side-bar starts -->
-        <div class="wsp-nav-wrap" id="sideBar">
-          <my-sidebar></my-sidebar>
-        </div>
-        <!-- side-bar ends -->
+      <!-- side-bar starts -->
+      <div class="wsp-nav-wrap" id="sideBar">
+        <my-sidebar></my-sidebar>
+      </div>
+      <!-- side-bar ends -->
       <div class="wsp-content-wrap" id="mainContent">
         <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
           <span class="toggle-bar"></span>
@@ -48,22 +53,26 @@
         <div class="wsp-container-fluid">
           <div class="wsp-row">
             <div class="wsp-col">
-                <h1>Collapse</h1>
-                <p>
-                    Collapsibles are useful when you want to hide and show large amount of content <br/>
-                    Just add base class <span class="wsp-cls-name">.wsp-nav </span> or <span class="wsp-cls-name">.wsp-nav-tabs</span> 
-                    to any ul , then extend with custom styles or our various included modifier classes.
-                </p>
+              <h1>Collapse</h1>
+              <p>
+                Collapsibles are useful when you want to hide and show large amount of content <br />
+                Just add base class <span class="wsp-cls-name">.wsp-nav </span> or <span
+                  class="wsp-cls-name">.wsp-nav-tabs</span>
+                to any ul , then extend with custom styles or our various included modifier classes.
+              </p>
               <div class="ex-wrapper wsp-mb-5">
                 <h3>Example</h3>
                 <div class="demo">
                   <button type="button" class="wsp-button button-primary" id="wsp-toggle">Toggle Button</button>
                   <div id="collapse" class="collapse show wsp-card-margin">
                     <div class="wsp-card">
-                        <div class="wsp-card-body">
-                            <h5>Heading</h5>
-                            This is place holder text. The basic dialog for modals should contain only valuable and relevant information. Simplify dialogs by removing unnecessary elements or content that does not support user tasks. If you find that the number of required elements for your design are making the dialog excessively large, then try a different design solution.  
-                        </div>
+                      <div class="wsp-card-body">
+                        <h5>Heading</h5>
+                        This is place holder text. The basic dialog for modals should contain only valuable and relevant
+                        information. Simplify dialogs by removing unnecessary elements or content that does not support
+                        user tasks. If you find that the number of required elements for your design are making the
+                        dialog excessively large, then try a different design solution.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -90,44 +99,50 @@
                 <p>Add the <span class="wsp-cls-name">.wsp-accordion</span> class to create a collpase.
                 </p>
                 <div class="demo">
-                    <div id="wsp-collapse">
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="wsp-card-link" data-toggle="wsp-accordian" href="#collapseOne">
-                                Accordion Title #1
-                            </a>
-                          </div>
-                          <div id="collapseOne" class="collapse" data-parent="#wsp-collapse">
-                            <div class="wsp-card-body">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
+                  <div id="wsp-collapse">
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="wsp-card-link" data-toggle="wsp-accordian" href="#collapseOne">
+                          Accordion Title #1
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="collapse" data-parent="#wsp-collapse">
+                        <div class="wsp-card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseTwo">
-                                Accordion Title #2
-                          </a>
-                          </div>
-                          <div id="collapseTwo" class="collapse" data-parent="#wsp-collapse">
-                            <div class="wsp-card-body">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseThree">
-                                Accordion Title #3
-                            </a>
-                          </div>
-                          <div id="collapseThree" class="collapse" data-parent="#wsp-collapse">
-                            <div class="wsp-card-body">
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
-                        </div>
+                      </div>
                     </div>
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseTwo">
+                          Accordion Title #2
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="collapse" data-parent="#wsp-collapse">
+                        <div class="wsp-card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseThree">
+                          Accordion Title #3
+                        </a>
+                      </div>
+                      <div id="collapseThree" class="collapse" data-parent="#wsp-collapse">
+                        <div class="wsp-card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(defaultAccordian)">
@@ -178,47 +193,53 @@
                 <p>Add the <span class="wsp-cls-name">.wsp-accordion</span> class to create a collpase.
                 </p>
                 <div class="demo">
-                    <div id="wsp-collapse">
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="wsp-card-link" data-toggle="wsp-accordion" href="#collapseFour">
-                                Accordion Title #1
-                            </a>
-                          </div>
-                          <div id="collapseFour" class="collapse show" data-parent="#accordion">
-                            <div class="wsp-card-body">
-                              <h5>Heading</h5>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
+                  <div id="wsp-collapse">
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="wsp-card-link" data-toggle="wsp-accordion" href="#collapseFour">
+                          Accordion Title #1
+                        </a>
+                      </div>
+                      <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                        <div class="wsp-card-body">
+                          <h5>Heading</h5>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
                         </div>
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseFive">
-                                Accordion Title #2
-                          </a>
-                          </div>
-                          <div id="collapseFive" class="collapse" data-parent="#accordion">
-                            <div class="wsp-card-body">
-                              <h5>Heading</h5>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="wsp-card">
-                          <div class="wsp-card-header">
-                            <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseSix">
-                                Accordion Title #3
-                            </a>
-                          </div>
-                          <div id="collapseSix" class="collapse" data-parent="#accordion">
-                            <div class="wsp-card-body">
-                              <h5>Heading</h5>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                          </div>
-                        </div>
+                      </div>
                     </div>
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseFive">
+                          Accordion Title #2
+                        </a>
+                      </div>
+                      <div id="collapseFive" class="collapse" data-parent="#accordion">
+                        <div class="wsp-card-body">
+                          <h5>Heading</h5>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wsp-card">
+                      <div class="wsp-card-header">
+                        <a class="collapsed wsp-card-link" data-toggle="wsp-accordian" href="#collapseSix">
+                          Accordion Title #3
+                        </a>
+                      </div>
+                      <div id="collapseSix" class="collapse" data-parent="#accordion">
+                        <div class="wsp-card-body">
+                          <h5>Heading</h5>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(defaultAccordianShow)">
