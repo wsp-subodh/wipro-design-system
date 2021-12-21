@@ -9483,6 +9483,13 @@ input::-moz-focus-outer {
   display: block;
 }
 
+.ex-wrapper .demo .wsp-row > .wsp-col {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(39, 41, 43, 0.03);
+  border: 1px solid rgba(39, 41, 43, 0.1);
+}
+
 .ex-wrapper .code {
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-size: 1rem;
@@ -9675,5 +9682,9 @@ input::-moz-focus-outer {
 
 .wsp-content .wsp-content-wrap .wsp-design-pri-card-wrap .wsp-card.wsp-design-pri-card .wsp-design-list li {
   margin-bottom: 0.825rem;
+}
+
+.ex-wrapper ul li {
+  list-style: disc;
 }
 /*# sourceMappingURL=main.css.map */
