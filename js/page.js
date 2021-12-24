@@ -14,7 +14,7 @@ class MySidebar extends HTMLElement {
         </div>
         <ul class="wsp-navbar-vertical" id="sideMenu">
             <li class="wsp-nav-link">
-            <a href="#">
+            <a href="getting-started.html">
                 <span class="wsp-link-text">Getting started</span>
             </a>
             </li>
@@ -252,20 +252,25 @@ function copyToClipboard(element) {
     });
 }
 
-//Card Read More
-function myFunction() {
-    var dots = document.getElementById("wsp-dots");
-    var moreText = document.getElementById("wsp-more");
-    var btnText = document.getElementById("wsp-read-more");
 
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
+
+
+
+//Search List
+function searchComponent() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("sideMenu");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
     }
-}
-
+  }
+  
