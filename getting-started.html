@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fevicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <!-- WSP CSS -->
+    <link href="css/wsp-font.css" rel="stylesheet">
+    <link href="css/wsp.min.css" rel="stylesheet">
+    <title>WSP-Design System</title>
+</head>
+
+<body>
+    <div class="wsp-wrapper">
+        <!-- Header starts -->
+        <header>
+            <div class="header wsp-fixed-top">
+                <div class="wsp-container-fluid">
+                    <div class="wsp-row">
+                        <div class="wsp-col-sm-12 wsp-col-md-12 wsp-col-lg-12">
+                            <div class="logo wsp-d-flex  align-items-center" onclick="location.href = 'index.html';">
+                                <div class="wsp-logo-wrapper">
+                                    <span class="wsp-logo-icon">
+                                        <i class="wsp-icon wsp-icon-layers-o"></i>
+                                    </span>
+                                    <h4 class="wsp-text-white wsp-mb-0">WSP Design System</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header ends -->
+
+        <!-- Main content starts -->
+        <div class="wsp-content wsp-d-flex">
+            <!-- side-bar starts -->
+            <div class="wsp-nav-wrap" id="sideBar">
+                <my-sidebar></my-sidebar>
+            </div>
+            <!-- side-bar ends -->
+            <div class="wsp-content-wrap" id="mainContent">
+                <span class="wsp-toggle-icon toggle-wrap" id="toogleMenu">
+                    <span class="toggle-bar"></span>
+                </span>
+                <div class="wsp-container-fluid">
+                    <div class="wsp-row">
+                        <div class="wsp-col">
+                            <h1>Introduction</h1>
+                            <h4 class="wsp-text-uppercase wsp-font-weight-light">Design is more important than ever -
+                                and design systems have become a huge piece of what makes a company or product
+                                successful, especially in the hyper-competitive global software market. </h4>
+                            <p>This site provides a range of resources for designers and developers, which includes:</p>
+                            <ul>
+                                <li>semantic and accessible component markup.</li>
+                                <li>cross-browser compatible CSS.</li>
+                                <li>icons, font, and design guidelines.</li>
+                            </ul>
+                            <h2>Quick start</h2>
+                            <p>Looking to quickly add Design System to your project?</p>
+
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h2>CSS</h2>
+                                <p>Copy-paste the stylesheet <span class="wsp-cls-name">&lt;link&gt; </span>into your
+                                    <span class="wsp-cls-name">&lt;head&gt;</span> before all other stylesheets to load
+                                    our
+                                    CSS.</p>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(cssPath)">
+                                        Copy
+                                    </span>
+                                    <code id="cssPath" class="language-html">
+                                        &lt;link rel="stylesheet" <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"https://wipro-design-system.herokuapp.com/dist/wsp.min.css"</span> crossorigin="anonymous"&gt;
+                                    </code>
+                                </div>
+                            </div>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h2>JS</h2>
+
+                                <p>Many of our components require the use of JavaScript to function. Specifically, they
+                                    require <span class="wsp-cls-name">>jQuery</span> and our own JavaScript plugins.
+                                </p>
+                                <p>Place one of the following <span class="wsp-cls-name">&lt;script&gt;</span>s near the
+                                    end of your pages, right before the closing <span
+                                        class="wsp-cls-name">&lt;/body&gt;</span> tag, to enable them. jQuery must come
+                                    first, then our JavaScript plugins.</p>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(jsPath)">
+                                        Copy
+                                    </span>
+                                    <code id="jsPath" class="language-html">
+                                        &lt;script <span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"https://code.jquery.com/jquery-3.6.0.min.js"</span> crossorigin="anonymous"&gt;&lt;/script&gt;<br/>
+                                        &lt;script <span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"https://wipro-design-system.herokuapp.com/dist/wsp.min.js"</span> crossorigin="anonymous"&gt;&lt;/script&gt;
+                                    </code>
+                                </div>
+                            </div>
+                            <div class="ex-wrapper wsp-mb-5">
+                                <h2>Starter template</h2>
+
+                                <p>Be sure to have your pages set up with the latest design and development standards.
+                                    That means using an HTML5 doctype and including a viewport meta tag for proper
+                                    responsive behaviors. Put it all together and your pages should look like this:</p>
+                                <div class="code">
+                                    <span class="copy-clipboard" onclick="copyToClipboard(staterTemplate)">
+                                        Copy
+                                    </span>
+                                    <code id="staterTemplate" class="language-html">
+                                        &lt;!doctype html&gt;<br/>
+                                        &lt;html lang="en"&gt;<br/>
+                                        &nbsp;&nbsp;&lt;head&gt;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Required meta tags --&gt;</span><br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;<br/>
+
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- WSP CSS --&gt;</span><br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"https://wipro-design-system.herokuapp.com/dist/wsp.min.css"</span> crossorigin="anonymous"&gt;<br/>
+                                   
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title>Hello, world!&lt;/title&gt;<br/>
+                                        &nbsp;&nbsp;&lt;/head&gt;<br/>
+                                        &nbsp;&nbsp;&lt;body&gt;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;Hello, world!&lt;/h1&gt;<br/><br/><br/><br/>
+
+                                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- WSP Javascript --&gt;</span><br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script <span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"https://code.jquery.com/jquery-3.6.0.min.js"</span> crossorigin="anonymous"&gt;&lt;/script&gt;<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;script <span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"https://wipro-design-system.herokuapp.com/dist/wsp.min.js"</span> crossorigin="anonymous"&gt;&lt;/script&gt;<br/>
+                                        &nbsp;&nbsp;&lt;/body&gt;<br/>
+                                        &lt;/html&gt;
+                                    </code>
+                                </div><br/>
+                                <p>That’s all you need for overall page requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main content ends -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/wsp.min.js"></script>
+    <script src="js/page.js"></script>
+</body>
+
+</html>
