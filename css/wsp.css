@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap");
+@import url("./wsp-font.css");
 /* skeleton */
 *,
 *::before,
@@ -4527,6 +4528,7 @@ h6 {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none;
   border: 1px solid transparent;
   font-weight: 400;
   padding: 0.375rem 0.75rem;
@@ -5042,7 +5044,6 @@ fieldset:disabled a.btn {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0;
-  width: 22rem;
 }
 
 .wsp-card > hr {
@@ -5811,6 +5812,10 @@ fieldset:disabled a.btn {
 
 .wsp-list-group .wsp-list-group-item + .wsp-list-group .wsp-list-group-item {
   border-top-width: 0;
+}
+
+.bullet-list {
+  list-style: disc;
 }
 
 .wsp-navbar {
