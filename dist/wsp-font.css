@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'wsp-icon';
-  src:  url('../fonts/wsp-icon.eot?sjjhiv');
-  src:  url('../fonts/wsp-icon.eot?sjjhiv#iefix') format('embedded-opentype'),
-    url('../fonts/wsp-icon.ttf?sjjhiv') format('truetype'),
-    url('../fonts/wsp-icon.woff?sjjhiv') format('woff'),
-    url('../fonts/wsp-icon.svg?sjjhiv#wsp-icon') format('svg');
+  src:  url('./fonts/wsp-icon.eot?sjjhiv');
+  src:  url('./fonts/wsp-icon.eot?sjjhiv#iefix') format('embedded-opentype'),
+    url('./fonts/wsp-icon.ttf?sjjhiv') format('truetype'),
+    url('./fonts/wsp-icon.woff?sjjhiv') format('woff'),
+    url('./fonts/wsp-icon.svg?sjjhiv#wsp-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
