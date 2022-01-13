@@ -28,11 +28,6 @@ class MySidebar extends HTMLElement {
                 <span class="wsp-link-text">Layout</span>
             </a>
             </li>
-            <li class="wsp-nav-link">
-            <a href="#">
-                <span class="wsp-link-text">Content</span>
-            </a>
-            </li>
             <li class="wsp-nav-link wsp-has-dropdown">
             <a href="#">
                 <span class="wsp-link-text">Forms</span>
