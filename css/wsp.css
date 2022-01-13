@@ -9443,6 +9443,9 @@ input::-moz-focus-outer {
   .wsp-content .wsp-content-wrap .wsp-card-wrap .wsp-card {
     margin-bottom: 1rem;
   }
+  .wsp-fixed-top .wsp-form-inline .wsp-button {
+    margin-right: 3rem;
+  }
 }
 
 @media (min-width: 769px) {
