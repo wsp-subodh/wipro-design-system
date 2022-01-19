@@ -45,7 +45,11 @@ html {
       max-width: 1140px;
     }
   }
-  
+  @media (min-width: 1400px) {
+    .wsp-container, .wsp-container-sm, .wsp-container-md, .wsp-container-lg, .wsp-container-xl {
+      max-width: 1320px;
+    }
+  }
   .wsp-row {
     display: -ms-flexbox;
     display: flex;
