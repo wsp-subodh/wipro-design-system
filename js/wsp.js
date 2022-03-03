@@ -7,12 +7,12 @@ $(document).ready(function () {
     $(this).parents(".wsp-navbar-vertical").find('.wsp-nav-link').removeClass('active'); // Just remove class from all folder  
     isActive ? $(this).removeClass('active') : $(this).addClass('active')
   })
-  $('.wsp-submenu a, .wsp-nav-link a').each(function() {
+  $('.wsp-submenu a, .wsp-nav-link a').each(function () {
     if (this.href === path) {
-     $(this).addClass('active');
-     $(this).closest(".wsp-has-dropdown").addClass("active");
+      $(this).addClass('active');
+      $(this).closest(".wsp-has-dropdown").addClass("active");
     }
-   });
+  });
 
 
   // close Alert
@@ -453,84 +453,84 @@ increase();
 
 // carousel slider
 
-(function($) {
+(function ($) {
   "use strict";
-  $.fn.sliderResponsive = function(settings) {
-    
-    var set = $.extend( 
+  $.fn.sliderResponsive = function (settings) {
+
+    var set = $.extend(
       {
         slidePause: 5000,
         fadeSpeed: 800,
         autoPlay: "on",
-        showArrows: "off", 
-        hideDots: "off", 
+        showArrows: "off",
+        hideDots: "off",
         hoverZoom: "on",
         titleBarTop: "off"
       },
       settings
-    ); 
-    
+    );
+
     var $slider = $(this);
     var size = $slider.find("> div").length; //number of slides
     var position = 0; // current position of carousal
     var sliderIntervalID; // used to clear autoplay
-      
+
     // Add a Dot for each slide
     $slider.append("<ul></ul>");
-    $slider.find("> div").each(function(){
+    $slider.find("> div").each(function () {
       $slider.find("> ul").append('<li></li>');
     });
-      
+
     // Put .show on the first Slide
     $slider.find("div:first-of-type").addClass("show");
-      
+
     // Put .showLi on the first dot
     $slider.find("li:first-of-type").addClass("showli")
 
-     //fadeout all items except .show
+    //fadeout all items except .show
     $slider.find("> div").not(".show").fadeOut();
-    
+
     // If Autoplay is set to 'on' than start it
     if (set.autoPlay === "on") {
-        startSlider(); 
-    } 
-    
+      startSlider();
+    }
+
     // If showarrows is set to 'on' then don't hide them
     if (set.showArrows === "on") {
-        $slider.addClass('showArrows'); 
+      $slider.addClass('showArrows');
     }
-    
+
     // If hideDots is set to 'on' then hide them
     if (set.hideDots === "on") {
-        $slider.addClass('hideDots'); 
+      $slider.addClass('hideDots');
     }
-    
+
     // If hoverZoom is set to 'off' then stop it
     if (set.hoverZoom === "off") {
-        $slider.addClass('hoverZoomOff'); 
+      $slider.addClass('hoverZoomOff');
     }
-    
+
     // If titleBarTop is set to 'on' then move it up
     if (set.titleBarTop === "on") {
-        $slider.addClass('titleBarTop'); 
+      $slider.addClass('titleBarTop');
     }
 
     // function to start auto play
     function startSlider() {
-      sliderIntervalID = setInterval(function() {
+      sliderIntervalID = setInterval(function () {
         nextSlide();
       }, set.slidePause);
     }
-    
+
     // on mouseover stop the autoplay
-    $slider.mouseover(function() {
+    $slider.mouseover(function () {
       if (set.autoPlay === "on") {
         clearInterval(sliderIntervalID);
       }
     });
-      
+
     // on mouseout starts the autoplay
-    $slider.mouseout(function() {
+    $slider.mouseout(function () {
       if (set.autoPlay === "on") {
         startSlider();
       }
@@ -541,14 +541,14 @@ increase();
 
     //on left arrow click
     $slider.find("> .left").click(prevSlide);
-      
+
     // Go to next slide
     function nextSlide() {
       position = $slider.find(".show").index() + 1;
       if (position > size - 1) position = 0;
       changeCarousel(position);
     }
-    
+
     // Go to previous slide
     function prevSlide() {
       position = $slider.find(".show").index() - 1;
@@ -557,7 +557,7 @@ increase();
     }
 
     //when user clicks slider button
-    $slider.find(" > ul > li").click(function() {
+    $slider.find(" > ul > li").click(function () {
       position = $(this).index();
       changeCarousel($(this).index());
     });
@@ -580,17 +580,17 @@ increase();
 })(jQuery);
 
 
- 
+
 //////////////////////////////////////////////
 // Activate each slider - change options
 //////////////////////////////////////////////
-$(document).ready(function() {
-  
+$(document).ready(function () {
+
   $("#slider1").sliderResponsive({
     fadeSpeed: 300,
     autoPlay: "on",
     hideDots: "on"
-  // Using default everything
+    // Using default everything
     // slidePause: 5000,
     // fadeSpeed: 800,
     // autoPlay: "on",
@@ -599,14 +599,14 @@ $(document).ready(function() {
     // hoverZoom: "on", 
     // titleBarTop: "off"
   });
-  
+
   $("#slider2").sliderResponsive({
     fadeSpeed: 300,
     autoPlay: "on",
     showArrows: "on",
     hideDots: "on"
   });
-  
+
   $("#slider3").sliderResponsive({
     fadeSpeed: 300,
     autoPlay: "on",
@@ -619,17 +619,15 @@ $(document).ready(function() {
     showArrows: "on",
     hideDots: "off"
   });
-  
-}); 
 
-//Dropdown
-
-function dropdownFunction() {
-  document.getElementById("wsp-drop").classList.toggle("show");
-}
+  //Dropdown
+  $(".wsp-dropdown-toggle").click(function () {
+    $(".wsp-drop").toggle(500);
+  });
+});
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (!event.target.matches('.wsp-dropdown-toggle')) {
     let dropdowns = document.getElementsByClassName("wsp-dropdown-menu");
     let i;
@@ -650,12 +648,12 @@ function myFunction() {
   var btnText = document.getElementById("wsp-read-more");
 
   if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
   } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
   }
 }
