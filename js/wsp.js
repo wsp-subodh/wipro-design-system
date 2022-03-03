@@ -622,7 +622,7 @@ $(document).ready(function () {
 
   //Dropdown
   $(".wsp-dropdown-toggle").click(function () {
-    $(".wsp-drop").toggle(500);
+    $(this).next(".wsp-drop").toggle(500);
   });
 });
 
