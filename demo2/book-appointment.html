@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic Lab - Book Appointment</title>
+    <!-- Custom Font -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="lib/wsp.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+<body id="pageTop">
+    <div class="wrapper">
+        <div class="wrapper-inner wsp-d-flex">
+            <!-- Sidebar Starts Here -->
+            <div class="sidebar bg-gradient-primary wsp-d-flex" id="menuSideBarLeft">
+                <div class="wsp-drawer wsp-w-100">
+                    <div class="wsp-drawer-content wsp-drawer-left" id="leftDwawer">
+                        <div class="wsp-drawer-header">
+                            <a class="wsp-navbar-brand wsp-logo wsp-white-logo wsp-mx-auto wsp-text-center wsp-text-uppercase" href="javascript:void(0)">Medic Lab</a>
+                            <a class="wsp-navbar-brand wsp-logo wsp-white-logo wsp-mx-auto wsp-text-center wsp-text-uppercase logo-short" href="javascript:void(0)">ML</a>
+                        </div>
+                        <div class="wsp-navigation-panel">
+                            <ul class="wsp-navbar-vertical">
+                                <li class="wsp-nav-link">
+                                    <a href="index.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-airplay-o"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="wsp-nav-link active">
+                                    <a href="appointments.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-briefcase-alt"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Appointments</span>
+                                    </a>
+                                </li>
+                                <li class="wsp-nav-link">
+                                    <a href="staff.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-users"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Staff</span>
+                                    </a>
+                                </li>
+                                <li class="wsp-nav-link">
+                                    <a href="patients.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-user"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Patients</span>
+                                    </a>
+                                </li>
+                                <li class="wsp-nav-link">
+                                    <a href="reports.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-text-document"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Reports</span>
+                                    </a>
+                                </li>
+                                <hr class="sidebar-divider wsp-m-0" />
+                                <li class="wsp-nav-link">
+                                    <a href="profile.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-cog"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Settings</span>
+                                    </a>
+                                </li>
+                                <li class="wsp-nav-link">
+                                    <a href="help.html">
+                                    <span class="wsp-nav-icon">
+                                        <i class="wsp-icon wsp-icon-question-circle"></i>
+                                    </span>
+                                    <span class="wsp-link-text">Help</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar End Here -->
+            <!-- Content wrapper Starts Here -->
+            <div class="content-wrapper wsp-w-100 wsp-d-flex">
+                <div class="content">
+                    <!-- Top Navbar Starts Here -->
+                    <nav class="wsp-navbar wsp-navbar-expand-sm wsp-navbar-light wsp-bg-white wsp-mb-4">
+                        <button type="button" class="wsp-button wsp-rounded-circle wsp-d-flex wsp-align-items-center wsp-text-primary" id="hamburgerSidebar"><i class="wsp-icon wsp-icon-menu wsp-font-weight-bold"></i></button>
+                        <ul class="wsp-navbar-nav wsp-ml-auto wsp-align-items-center">
+                            <li class="wsp-nav-item wsp-position-relative global-search">
+                                <a class="wsp-nav-link wsp-dropdown-toggle" href="javascript:void(0)"><i class="wsp-icon wsp-icon-search-o wsp-font-weight-bold"></i></a>
+                                <div class="wsp-dropdown-menu wsp-drop">
+                                    <div class="wsp-px-3">
+                                        <div class="wsp-input-group">
+                                            <input type="text" class="wsp-form-control wsp-form-control-sm" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+                                            <div class="wsp-input-group-append">
+                                                <button type="button" class="wsp-button button-sm"><i class="wsp-icon wsp-icon-search-o wsp-font-weight-bold"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </li>
+                            <li class="wsp-nav-item wsp-position-relative notifications">
+                                <a class="wsp-nav-link wsp-dropdown-toggle" href="javascript:void(0)"><i class="wsp-icon wsp-icon-bell"></i>
+                                    <span class="wsp-badge badge-danger wsp-font-weight-bold">9+</span>
+                                </a>
+                                <div class="wsp-dropdown-menu wsp-drop dropdown-list">
+                                    <h4 class="wsp-text-white wsp-text-uppercase wsp-m-auto wsp-px-4 wsp-py-2">Alerts Center</h4>
+                                    <a class="wsp-dropdown-item wsp-d-flex" href="#">
+                                        <div class="wsp-d-flex wsp-mr-3 wsp-rounded-circle wsp-text-center wsp-align-items-center">
+                                            <div class="icon-circle wsp-bg-primary wsp-rounded-circle wsp-align-items-center">
+                                                <span class="wsp-nav-icon">
+                                                    <i class="wsp-icon wsp-icon-text-document"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="date">December 12, 2019</div>
+                                            <span class="wsp-font-weight-bold wsp-text-dark">A new monthly report is ready to download!</span>
+                                        </div>
+                                    </a>
+                                    <a class="wsp-dropdown-item wsp-d-flex" href="#">
+                                        <div class="wsp-d-flex wsp-mr-3 wsp-rounded-circle wsp-text-center wsp-align-items-center">
+                                            <div class="icon-circle wsp-bg-success wsp-rounded-circle wsp-align-items-center">
+                                                <span class="wsp-nav-icon">
+                                                    <i class="wsp-icon wsp-icon-link"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="date">December 7, 2019</div>
+                                            <span class="wsp-text-dark">$290.29 has been deposited into your account!</span>
+                                        </div>
+                                    </a>
+                                    <a class="wsp-dropdown-item wsp-d-flex" href="#">
+                                        <div class="wsp-d-flex wsp-mr-3 wsp-rounded-circle wsp-text-center wsp-align-items-center">
+                                            <div class="icon-circle wsp-bg-warning wsp-rounded-circle wsp-align-items-center">
+                                                <span class="wsp-nav-icon">
+                                                    <i class="wsp-icon wsp-icon-question-circle"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="date">December 2, 2019</div>
+                                            <span class="wsp-text-dark">Spending Alert: We've noticed unusually high spending for your account.</span>
+                                        </div>
+                                    </a>
+                                    <a class="wsp-dropdown-item show-all-alerts" href="#">Show All Alerts</a>
+                                </div>
+                            </li>
+                            <li class="wsp-nav-item topbar-divider wsp-d-none wsp-d-sm-block wsp-ml-3"></li>
+                            <li class="wsp-nav-item wsp-position-relative">
+                                <a class="wsp-avatar wsp-avatar-sm rounded-circle wsp-dropdown-toggle" href="javascript:void(0)">
+                                    <img src="assets/img/user.png" alt="">
+                                </a>
+                                <div class="wsp-dropdown-menu wsp-drop">
+                                    <div class="user-info wsp-d-flex wsp-px-3 wsp-py-1">
+                                        <span class="wsp-avatar wsp-avatar-sm rounded-circle">
+                                            <img src="assets/img/user.png" alt="" />
+                                        </span>
+                                        <span>
+                                            <b>John Doe</b> <br /> +91 9879879879
+                                        </span>
+                                    </div>
+                                    <div class="dropdown-divider wsp-my-2"></div>
+                                    <a class="wsp-dropdown-item" href="profile.html">
+                                        <span class="wsp-nav-icon wsp-mr-2">
+                                            <i class="wsp-icon wsp-icon-user"></i>
+                                        </span>
+                                        Profile
+                                    </a>
+                                    <a class="wsp-dropdown-item" href="appointments.html">
+                                        <span class="wsp-nav-icon wsp-mr-2">
+                                            <i class="wsp-icon wsp-icon-briefcase-alt"></i>
+                                        </span>
+                                        Appointments</a>
+                                    <a class="wsp-dropdown-item" href="reports.html">
+                                        <span class="wsp-nav-icon wsp-mr-2">
+                                            <i class="wsp-icon wsp-icon-text-document"></i>
+                                        </span>
+                                        Reports</a>
+                                    <a class="wsp-dropdown-item" href="doctor.html">
+                                        <span class="wsp-nav-icon wsp-mr-2">
+                                            <i class="wsp-icon wsp-icon-star"></i>
+                                        </span>
+                                        Doctor
+                                    </a>
+                                    <div class="dropdown-divider wsp-my-2"></div>
+                                    <a class="wsp-dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <span class="wsp-nav-icon wsp-mr-2">
+                                            <i class="wsp-icon wsp-icon-logout"></i>
+                                        </span>
+                                        Logout
+                                    </a>
+                                 </div>
+                            </li>
+                        </ul>  
+                    </nav>
+                    <!-- Top Navbar End Here -->
+                    <!-- Content Block Starts Here -->
+                    <div class="wsp-container-fluid wsp-px-md-4">
+                        <nav class="wsp-breadcrumb">
+                            <ol>
+                                <li>
+                                    <a href="patients.html">Patients</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:">P2021-01</a>
+                                </li>
+                                <li>
+                                   <a href="javascript:" aria-current="page">Book Appointment</a>
+                                 </li>
+                            </ol>
+                        </nav>
+                        <div class="booking-appointment-steps wsp-d-lg-flex">
+                            <div class="wsp-stepper horizontal">
+                                <div class="wsp-step step-complete">
+                                    <div class="wsp-step-bar wsp-d-flex wsp-w-100 wsp-align-items-center">
+                                        <a href="add-appointment.html" class="wsp-step-title wsp-w-100">Select Patient Detail</a>
+                                    </div>
+                                </div>
+                                <div class="wsp-step step-active">
+                                    <div class="wsp-step-bar wsp-d-flex wsp-w-100 wsp-align-items-center">
+                                        <a href="book-appointment.html" class="wsp-step-title wsp-w-100">Select Tests</a>
+                                    </div>
+                                </div>
+                                <div class="wsp-step step-incomplete">
+                                    <div class="wsp-step-bar wsp-d-flex wsp-w-100 wsp-align-items-center">
+                                        <a href="book-appointment-slot.html" class="wsp-step-title wsp-w-100">Select Preferred Slot</a>
+                                    </div>
+                                </div>
+                                <div class="wsp-step step-incomplete">
+                                    <div class="wsp-step-bar wsp-d-flex wsp-w-100 wsp-align-items-center">
+                                        <a href="book-appointment-payment.html" class="wsp-step-title wsp-w-100">Make Payment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="status-booked wsp-d-flex wsp-mt-sm-3 wsp-mt-lg-0 wsp-justify-content-end">
+                                <a href="" class="wsp-button custom-btn">Mark Status as Booked</a>
+                            </div>
+                        </div>
+                        <div class="wsp-row">
+                            <div class="wsp-col-sm-12">
+                                <div class="wsp-card card-tile">
+                                    <div class="wsp-card-body">
+                                        <div class="content-header-actions wsp-d-flex wsp-justify-content-between wsp-align-items-center">
+                                            <div class="w-33">
+                                                <form>
+                                                    <input class="wsp-form-control wsp-form-control-sm content-custom-input" type="text" placeholder="Search tests and packages" />
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="wsp-row">
+                                            <div class="wsp-col-lg-8">
+                                                <div class="wsp-table-responsive wsp-my-4">
+                                                    <table class="wsp-table wsp-bg-white table-actions">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Code</th>
+                                                                <th>Name</th>
+                                                                <th>Amount</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#">Ts6577</a></td>
+                                                                <td>Fasting Blood Sugar</td>
+                                                                <td>$2024</td>
+                                                                <td>
+                                                                    <a href="#" class="custom-btn wsp-d-inline-block wsp-px-3 wsp-py-2 wsp-mx-2">
+                                                                        <span class="wsp-nav-icon">
+                                                                            <i class="wsp-icon wsp-icon-plus-circle-o"></i>
+                                                                        </span>Add
+                                                                    </a>
+                                                                    <i class="fa-solid fa-info-circle custom-icon-info"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">Ts6777</a></td>
+                                                                <td>Fasting Blood Sugar</td>
+                                                                <td>$2024</td>
+                                                                <td>
+                                                                    <a href="#" class="custom-btn wsp-d-inline-block wsp-px-3 wsp-py-2 wsp-mx-2">
+                                                                        <span class="wsp-nav-icon">
+                                                                            <i class="wsp-icon wsp-icon-plus-circle-o"></i>
+                                                                        </span>Add
+                                                                    </a>
+                                                                    <i class="fa-solid fa-info-circle custom-icon-info"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">Ts3477</a></td>
+                                                                <td>Beta HCG</td>
+                                                                <td>$2000</td>
+                                                                <td>
+                                                                    <a href="#" class="custom-btn wsp-d-inline-block wsp-px-3 wsp-py-2 wsp-mx-2">
+                                                                        <span class="wsp-nav-icon">
+                                                                            <i class="wsp-icon wsp-icon-plus-circle-o"></i>
+                                                                        </span>Add
+                                                                    </a>
+                                                                    <i class="fa-solid fa-info-circle custom-icon-info"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">Ts9577</a></td>
+                                                                <td>Vitamin B12</td>
+                                                                <td>$3500</td>
+                                                                <td>
+                                                                    <a href="#" class="custom-btn wsp-d-inline-block wsp-px-3 wsp-py-2 wsp-mx-2">
+                                                                        <span class="wsp-nav-icon">
+                                                                            <i class="wsp-icon wsp-icon-plus-circle-o"></i>
+                                                                        </span>Add
+                                                                    </a>
+                                                                    <i class="fa-solid fa-info-circle custom-icon-info"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#">Ts6577</a></td>
+                                                                <td>Fasting Blood Sugar</td>
+                                                                <td>$2024</td>
+                                                                <td>
+                                                                    <a href="#" class="custom-btn wsp-d-inline-block wsp-px-3 wsp-py-2 wsp-mx-2">
+                                                                        <span class="wsp-nav-icon">
+                                                                            <i class="wsp-icon wsp-icon-plus-circle-o"></i>
+                                                                        </span>Add
+                                                                    </a>
+                                                                    <i class="fa-solid fa-info-circle custom-icon-info"></i>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="wsp-d-flex wsp-justify-content-between">
+                                                    <a href="add-appointment.html" class="custom-btn wsp-px-3 wsp-py-2">Previous</a>
+                                                    <a href="book-appointment-slot.html" class="custom-btn wsp-px-3 wsp-py-2 wsp-ml-2">Next</a>
+                                                </div>
+                                            </div>
+                                            <div class="wsp-col-lg-4 app-patient-details wsp-mt-4">
+                                                <div class="app-patient-details-sec wsp-mb-1">
+                                                    <div class="app-patient-details-head wsp-p-3">
+                                                        <h5 class="wsp-mb-0 wsp-font-weight-normal wsp-text-dark">Patient Details</h5>
+                                                    </div>
+                                                    <div class="app-patient-details-body wsp-px-4 wsp-py-2">
+                                                        <div class="wsp-font-weight-bold wsp-text-dark">John Doe</div>
+                                                        <div class="patient-desc">56, Xyz <br />abc@gmail.com</div>
+                                                    </div>
+                                                </div>
+                                                <div class="app-patient-test-sec">
+                                                    <div class="app-patient-details-head wsp-p-3">
+                                                        <h5 class="wsp-mb-0 wsp-font-weight-normal wsp-text-dark">Tests</h5>
+                                                    </div>
+                                                    <div class="app-patient-details-body">
+                                                        <div class="wsp-table-responsive inner-content-table">
+                                                            <table class="wsp-table wsp-bg-white table-actions wsp-px-2">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Name</th>
+                                                                        <th>Price ($)</th>
+                                                                        <th>Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Fasting Blood Sugar</td>
+                                                                        <td>$2024</td>
+                                                                        <td>
+                                                                            <a href="#" class="">
+                                                                                <i class="wsp-icon wsp-icon-minus-circle wsp-text-danger"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Fasting Blood Sugar</td>
+                                                                        <td>$2024</td>
+                                                                        <td>
+                                                                            <a href="#" class="">
+                                                                                <i class="wsp-icon wsp-icon-minus-circle wsp-text-danger"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Fasting Blood Sugar</td>
+                                                                        <td>$2024</td>
+                                                                        <td>
+                                                                            <a href="#" class="">
+                                                                                <i class="wsp-icon wsp-icon-minus-circle wsp-text-danger"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th colspan="2">Sub Total</th>
+                                                                        <th>$6072</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2">Taxes</td>
+                                                                        <td>$12.5</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2">Service Fee</td>
+                                                                        <td>$100</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th colspan="2">Grand Total</th>
+                                                                        <th>$6184.5</th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Starts Here -->
+                <footer class="wsp-text-center wsp-bg-white wsp-py-4">
+                    <div class="wsp-container">
+                        <span class="copyright">Copyright &copy; Your Website 2021</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Modal -->
+    <div class="wsp-modal" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="wsp-modal-dialog" role="document">
+            <div class="wsp-modal-content">
+                <div class="wsp-modal-header wsp-text-white">
+                    <h5 class="wsp-modal-title wsp-font-weight-normal">Ready to Leave?</h5>
+                    <button type="button" class="wsp-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="wsp-icon-x-small wsp-text-white"></span>
+                    </button>
+                </div>
+                <div class="wsp-modal-body">
+                    Select "Logout" below if you are ready to end your current session.
+                </div>
+                <div class="wsp-modal-footer wsp-border-top wsp-border-light">
+                <button type="button" class="wsp-button btn-secondary" data-dismiss="modal">Cancel</button>
+                <a href="login.html" class="wsp-button btn-primary">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="lib/wsp.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
