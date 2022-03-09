@@ -1,0 +1,1218 @@
+// Global Data
+$primary-font : Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// Colors
+$primary-color: #6B7280;
+$color-blue-primary: #4e73df;
+$bg-gradient-primary-top : #31B4B1;
+$color-theme-400: #32b3b1;
+$bg-gradient-primary-bottom : #437AF0;
+$color-gray: #3a3b45;
+$gray-200: #d1d3e2;
+$gray-300: #F3F4F6;
+$gray-400: #e4e5e7;
+$gray-500: #eaecf4;
+$gray-600: #c9c7c5;
+$color-lighter-gray: #e3e6f0;
+$color-light-gray: #9CA3AF;
+$gray-800: #25282B;
+$btn-primary-color: #31B4B1;
+$btn-primary-hover-color: #36a3c4;
+$btn-google-bg-color: #ea4335;
+$btn-google-hover-bg-color: #e12717;
+$btn-fb-bg-color: #3b5998;
+$btn-fb-hover-bg-color: #30497c;
+$color-white: #fff;
+$color-white-100: #f7f7fa;
+$color-white-200: #fafaf9;
+$color-white-400: #dddbda;
+$color-white-500: #ecebea;
+$color-black: #000;
+$color-blue: #1b96ff;
+$color-blue-600: #032d60;
+$color-blue-500: #014486;
+$color-blue-400: #0681c8;
+$color-blue-300: #6A9EDD;
+$color-blue-200: #70a7e8;
+$color-blue-100: #70a7e847;
+$color-orange: #FCAE73;
+$color-orange-100: #FFEADA;
+$color-green: #28B951;
+$color-green-700: #2e844a;
+$color-green-600: #45c65a;
+$color-green-100: #DDF9E4;
+$color-sky: #0A90A7;
+$color-sky-100: #B0D6DC;
+$color-sky-200: #cad8d940;
+$link-color: #4e73df;
+$input-placeholder-color: #858796;
+$color-transparent: transparent;
+
+// Font size
+$body-font-size: .8125rem;
+$primary-font-size: 1rem;
+$h1: 2rem;
+$h3: 1.5rem;
+$h4: 1.25rem;
+$h5: 0.9rem;
+$h6: 0.8rem;
+$font-size-80: 80%;
+$cursor-pointer: pointer;
+
+// Font Weight
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+
+// Media screen
+$small: 767px;
+$medium-min: 768px;
+$medium-max: 991px;
+$large-min: 992px;
+$large-max: 1024px;
+$large-max-desktop: 1199px;
+$extra-large-min: 1200px;
+$extra-large-max: 1899px;
+$double-extra-large: 1900px;
+
+// Mixins
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin btn-user-defaulf {
+    @include border-radius(4px);
+    font-size: $h6;
+    padding: 0.75rem 1rem;
+}
+@mixin btn-primary {
+    background-color: $btn-primary-color;
+    border: 1px solid $btn-primary-color;
+    color: $color-white;
+    &:hover {
+        background-color: $btn-primary-hover-color;
+    }
+}
+@mixin btn-secondary {
+    background-color: $input-placeholder-color;
+    border: 1px solid $input-placeholder-color;
+    color: $color-white;
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+@mixin placeholder {
+    &::-webkit-input-placeholder {color: $input-placeholder-color;opacity: 1}
+    &::-moz-placeholder {color: $input-placeholder-color;opacity: 1}
+    &:-ms-input-placeholder {color: $input-placeholder-color;opacity: 1}
+    &::-ms-input-placeholder {color: $input-placeholder-color;opacity: 1}
+}
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+       -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+}
+@mixin box-shadow-card {
+    @include box-shadow(0 0.15rem 1.75rem 0 $gray-400);
+}
+
+// Custom styles
+html, body, h1, h2, h3, h4, h5, h6 {
+    font-family: $primary-font;
+}
+body {
+    color: $primary-color;
+    font-size: $body-font-size;
+}
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+.border-0 {
+    border: 0 !important;
+}
+.w-33 {
+    width: 33%;
+}
+.wsp-form-control {
+    @include placeholder;
+}
+.bg-gradient-primary {
+    background-color: $color-blue-primary;
+    background-image: linear-gradient($bg-gradient-primary-top, $bg-gradient-primary-bottom);
+    background-size: cover;
+    background-attachment: fixed;
+}
+form {
+    .wsp-form-group {
+        label {
+            cursor: $cursor-pointer;
+        }
+        .wsp-form-control {
+            font-size: $h6;
+        }
+    }
+    .wsp-form-control {
+        font-size: $h6;
+    }
+}
+.custom-ul-list {
+    margin: 0;
+    padding: 0 0 0 15px;
+    li {
+        list-style-type: disc;
+    }
+}
+.auth-panel-outer{
+    @include border-radius(0.375rem);
+    box-shadow: 0 1rem 3rem #0000002d;
+    .auth-panel-left {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &.bg-login-image {
+            background-image: url(../img/login.png);    
+        }
+        &.bg-password-image {
+            background-image: url(../img/undraw_secure_login_pdn4.svg);
+        }
+    }
+    .auth-panel-right {
+        .auth-panel-right-text-heading {
+            font-size: $h4;
+            color: $color-gray;
+        }
+        form {
+            &.user {
+                .wsp-form-group {
+                    .wsp-form-check {
+                        .user-remember {
+                            @include border-radius(0.25rem);
+                        }
+                    }
+                }
+                .btn-user {
+                    @include btn-user-defaulf();
+                    &.button-primary {
+                        background-color: $btn-primary-color;
+                        border: 1px solid $btn-primary-color;
+                        &:hover {
+                            background-color: $btn-primary-hover-color;
+                        }
+                    }
+                    &.btn-google {
+                        background-color: $btn-google-bg-color;
+                        &:hover, &:focus {
+                            background-color: $btn-google-hover-bg-color;
+                            color: $color-white;
+                        }
+                    }
+                    &.btn-fb {
+                        background-color: $btn-fb-bg-color;
+                        &:hover, &:focus {
+                            background-color: $btn-fb-hover-bg-color;
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+            hr {
+                border: 1px solid #aaaaaa;
+            }
+        }
+    }
+}
+.wrapper {
+    .sidebar {
+        min-height: 100vh;
+        .wsp-drawer {
+            .wsp-drawer-content {
+                position: inherit;
+                display: inherit;
+                width: inherit;
+                background: $color-transparent;
+                box-shadow: none;
+                .wsp-logo {
+                    margin-right: auto;
+                    &.logo-short {
+                        display: none;
+                    }
+                }
+                .wsp-navigation-panel {
+                    width: inherit;
+                    border: inherit;
+                    box-shadow: none;
+                    ul {
+                        .wsp-nav-link {
+                            padding: 5px 15px;
+                            a {
+                                font-size: $primary-font-size;
+                            }
+                            &.active {
+                                a {
+                                    @include border-radius(6px);
+                                    background-color: $color-white;
+                                    &:hover {
+                                        background-color: $color-white;
+                                    }
+                                    .wsp-nav-icon, .wsp-link-text {
+                                        color: $color-light-gray;
+                                    }
+                                }
+                            }
+                            a {
+                                padding: 0.5rem;
+                                color: $color-white;
+                                &:hover {
+                                    background-color: $color-transparent;
+                                }
+                                .wsp-nav-icon {
+                                    color: $color-white;
+                                    font-size: $primary-font-size;
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                        }
+                        .sidebar-divider {
+                            border-top: 1px solid $btn-primary-color;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+        &.toggle-enable {
+            .wsp-drawer {
+                .wsp-drawer-content {
+                    .wsp-logo {
+                        display: none;
+                        &.logo-short {
+                            display: block
+                        }
+                    }
+                    .wsp-navigation-panel {
+                        .wsp-nav-link {
+                            padding-right: 6px;
+                            padding-left: 6px;
+                            text-align: center;
+                            a {
+                                display: inherit;
+                                font-size: 12px;
+                                span {
+                                    display: inherit;
+                                    margin: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-wrapper {
+        background-color: $gray-300;
+        overflow-x: hidden;
+        flex-direction: column;
+        .content {
+            flex: 1 0 auto;
+            nav.wsp-navbar {
+                @include box-shadow-card;
+                height: 4.375rem;
+                #hamburgerSidebar {
+                    background-color: $color-transparent;
+                    @include border-radius(50%);
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    &:hover {
+                        background-color: $gray-500;
+                    }
+                }
+                .wsp-navbar-nav {
+                    .wsp-nav-item {
+                        padding: 0 0.75rem;
+                        .wsp-nav-link {
+                            position: relative;
+                            .wsp-icon {
+                                color: $color-light-gray;
+                            }
+                            .wsp-badge {
+                                @include border-radius(5px);
+                                position: absolute;
+                                transform: scale(.7);
+                                transform-origin: top right;
+                                right: -2px;
+                                padding: 0.25em 0.4em;
+                                font-size: 75%;
+                                margin-top: -0.15rem;
+                                line-height: 1;
+                            }
+                        }
+                        &.topbar-divider {
+                            width: 1px;
+                            height: calc(4.375rem - 2rem);
+                            background-color: $color-lighter-gray;
+                            padding: inherit;
+                        }
+                        &.global-search {
+                            .wsp-dropdown-menu {
+                                .wsp-input-group {
+                                    border: 0;
+                                    input {
+                                        background-color: $gray-300;
+                                        @include border-radius(5px 0 0 5px)
+                                    }
+                                    .wsp-button {
+                                        background-color: $bg-gradient-primary-top;
+                                        @include border-radius(0 5px 5px 0);
+                                        .wsp-icon {
+                                            color: $color-white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.notifications {
+                            .wsp-dropdown-menu {
+                                padding: initial;
+                                min-width: 320px;
+                                h4 {
+                                    font-size: $h4;
+                                    background-color: $color-blue-primary;
+                                    @include border-radius(0.25rem 0.25rem 0 0);
+                                }
+                                .wsp-dropdown-item {
+                                    padding-top: 0.5rem;
+                                    padding-bottom: 0.5rem;
+                                    white-space: inherit;
+                                    border-bottom: 1px solid $color-lighter-gray;
+                                    &:active {
+                                        background-color: $color-lighter-gray;
+                                        color: inherit;
+                                    }
+                                    .date {
+                                        color: $color-light-gray;
+                                        font-size: $font-size-80;
+                                    }
+                                    &.show-all-alerts {
+                                        text-align: center;
+                                        color: $color-light-gray;
+                                        font-size: $font-size-80;
+                                    }
+                                }
+                            }
+                        }
+                        .wsp-dropdown-menu {
+                            right: 0;
+                            left: inherit;
+                            font-size: $h6;
+                            min-width: 200px;
+                            @include box-shadow-card;
+                            .user-info {
+                                .wsp-avatar {
+                                    margin-right: 12px;
+                                }
+                            }
+                            .wsp-icon {
+                                color: $gray-200;
+                            }
+                            .dropdown-divider {
+                                border-top: 1px solid $gray-500;
+                            }
+                            .icon-circle {
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                line-height: 2.5rem;
+                                .wsp-icon {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .wsp-dropdown-menu {
+                @include box-shadow-card;
+            }
+            .custom-btn {
+                background-color: $bg-gradient-primary-top;
+                @include border-radius(4px);
+                color: $color-white;
+                font-size: $h6;
+                white-space: inherit;
+                .wsp-icon {
+                    color: $color-white;
+                    font-weight: $font-weight-bold;
+                }
+                &:hover {
+                    background-color: $btn-primary-hover-color;
+                }
+            }
+            .custom-btn-secondary {
+                background-color: $gray-600;
+                border: 1px solid $gray-600;
+                &:hover {
+                    border: 1px solid transparent;
+                }
+            }
+            .content-custom-input {
+                background-color: $color-sky-200;
+                border: 0;
+                @include border-radius(4px);
+                font-size: $h6;
+                &:focus {
+                    background-color: $color-white;
+                }
+            }
+            .page-title {
+                h1 {
+                    font-size: $h4;
+                    color: $gray-800;
+                }
+            }
+            .card-tile {
+                @include border-radius(0.375rem);
+                @include box-shadow-card;
+                border: none;
+            }
+            .card-top {
+                .wsp-card-title {
+                    color: $gray-800;
+                    font-size: $h4;
+                    margin-bottom: 0;
+                }
+                .card-sub-title {
+                    font-size: $h6;
+                }
+                .wsp-nav-icon {
+                    font-size: $h3;
+                    color: $color-theme-400;
+                }
+            }
+            .wsp-nav-tabs {
+                border-color: $color-white-400;
+                .wsp-nav-link {
+                    font-size: $h6;
+                    padding: 5px 9px;
+                    &.active {
+                        font-weight: bold;
+                        color: $color-black;
+                        border-color: $color-blue;
+                    }
+                    &:hover {
+                        border-bottom: 2px solid $color-blue;
+                    }
+                }
+            }
+            .progress-status {
+                .progress-icon {
+                    width: 35px;
+                    height: 35px;
+                    &.blue {
+                        background-color: $color-blue-100;
+                        color: $color-blue-200;
+                    }
+                    &.orange {
+                        background-color: $color-orange-100;
+                        color: $color-orange;
+                    }
+                    &.green {
+                        background-color: $color-green-100;
+                        color: $color-green;
+                    }
+                    &.sky {
+                        background-color: $color-sky-100;
+                        color: $color-sky;
+                    }
+                }
+                .progress-state {
+                    flex: 1;
+                    &.bg-blue {
+                        .wsp-progress-bar {
+                            background-color: $color-blue-300;
+                        }
+                    }
+                    &.bg-orange {
+                        .wsp-progress-bar {
+                            background-color: $color-orange;
+                        }
+                    }
+                    &.bg-green {
+                        .wsp-progress-bar {
+                            background-color: $color-green;
+                        }
+                    }
+                    &.bg-sky {
+                        .wsp-progress-bar {
+                            background-color: $color-sky;
+                        }
+                    }
+                    .wsp-progress {
+                        width: inherit;
+                    }
+                    .progress-label {
+                        font-size: $h6;
+                    }
+                }
+            }
+            .wsp-table-responsive {
+                @include box-shadow-card;
+                white-space: nowrap;
+                table {
+                    // table-layout: fixed;
+                    margin-bottom: 0;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    border-top: 1px solid $color-white-400;
+                    border-bottom: 1px solid $color-white-400;
+                    color: $primary-color;
+                    tbody {
+                        tr {
+                            &:hover {
+                                background-color: $gray-300;
+                            }
+                        }
+                    }
+                    tr {
+                        th, td {
+                            font-size: 13px;
+                            vertical-align: middle;
+                        }
+                        th {
+                            font-weight: $font-weight-bold;
+                            padding: .75rem .5rem;
+                            background-color: $color-white-200;
+                            border-width: 1px;
+                            color: $gray-800;
+                        }
+                        td {
+                            &:last-child {
+                                text-align: inherit;
+                            }
+                        }
+                    }
+                    &.table-actions {
+                        tr {
+                            th, td {
+                                &:last-child {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.inner-content-table {
+                    @include box-shadow(none);
+                    table {
+                        border: 0;
+                        table-layout: inherit;
+                        background-color: $color-white-100;
+                        tr {
+                            th {
+                                background-color: $color-white-100;
+                                border: 0;
+                            }
+                            td {
+                                border: 0;
+                            }
+                        }
+                        tfoot {
+                            tr {
+                                &:first-child {
+                                    th {
+                                        border-top: 1px solid $gray-400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .text-truncate {
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                vertical-align: middle;
+            }
+            .staff-role-user {
+                .role-user-block {
+                    span {
+                        &:first-child {
+                            color: $gray-800;
+                        }
+                        &:last-child {
+                            color: $color-light-gray;
+                        }
+                    }
+                }
+                .wsp-dropdown {
+                    .wsp-dropdown-menu {
+                        right: 0;
+                        left: inherit;
+                    }
+                }
+            }
+            .custom-dropdown-position-right {
+                right: 0;
+                left: inherit;
+            }
+            .pagination {
+                .page-number {
+                    border-radius: inherit;
+                    margin-left: -4px;
+                    &.prev {
+                        width: inherit;
+                        @include border-radius(5px 0 0 5px)
+                    }
+                    &.next {
+                        width: inherit;
+                        @include border-radius(0 5px 5px 0)
+                    }
+                    &:hover {
+                        background-color: $gray-500;
+                    }
+                    &.active {
+                        background-color: $color-blue-primary;
+                        a {
+                            color: $color-white;
+                        }
+                    }
+                    a {
+                        color: $color-blue-primary;
+                    }
+                }
+            }
+            .custom-list-group {
+                .wsp-list-group {
+                    @include border-radius(0);
+                    .wsp-list-group-item {
+                        padding: 0.75rem;
+                    }
+                }
+            }
+            .profile-header {
+                .profile-bg {
+                    max-height: 160px;
+                    @include border-radius(0.375rem 0.375rem 0 0);
+                    border-radius: 0.375rem 0.375rem 0 0;
+                    object-fit: cover;
+                }
+                .profile-avatar-outer {
+                    max-width: 130px;
+                    transform: translate(-50%, 0);
+                    left: 50%;
+                    top: 110px;
+                    border: 2px solid #fff;
+                    .profile-upload-icon {
+                        background: $gray-400;
+                        right: 10px;
+                        bottom: 10px;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: $cursor-pointer;
+                    }
+                }
+                .profile-user-info {
+                    margin-top: 65px;
+                    .profile-user-name {
+                        color: $color-gray;
+                    }
+                }
+            }
+            .custom-avatar {
+                vertical-align: top;
+            }
+            .wsp-breadcrumb {
+                li {
+                    a {
+                        font-size: $primary-font-size;
+                        color: $link-color;
+                        &:hover {
+                            color: $color-blue-300;
+                        }
+                    }
+                }
+            }
+            .appointment-details {
+                .card-header {
+                    border-bottom: 1px solid $gray-200;
+                }
+                .appointment-detail-content {
+                    .appointment-progress-status {
+                        .wsp-timeline {
+                            padding: initial;
+                            .wsp-timeline-container {
+                                width: inherit;
+                                left: inherit;
+                                padding: 10px 20px;
+                                .wsp-content {
+                                    padding: initial;
+                                    p {
+                                        margin: inherit;
+                                    }
+                                }
+                                &::after {
+                                    outline: 3px solid #fff;
+                                    border: 4px solid $color-white;
+                                    background: $color-white-400;
+                                }
+                                &.active {
+                                    &::after {
+                                        border-color: $color-blue;
+                                        background: $color-white;
+                                    }
+                                }
+                            }
+                            &::after {
+                                top: 30px;
+                                bottom: 30px;
+                                left: inherit;
+                                background-color: $color-white-400;
+                            }
+                        }
+                    }
+                    .app-amount-actions {
+                        background: $color-blue-400;
+                        @include border-radius(6px);
+                        .app-actions {
+                            a {
+                                &:hover {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .booking-appointment-steps {
+                margin-bottom: 20px;
+                .wsp-step {
+                    padding: inherit;
+                    background-color: $color-white-500;
+                    margin-left: 0.375rem;
+                    margin-right: 0.4375rem;
+                    align-items: center;
+                    height: 2rem;
+                    .wsp-step-bar {
+                        position: inherit;
+                        height: 100%;
+                        background: inherit;
+                        .wsp-step-title {
+                            color: $color-black;
+                            text-align: center;
+                            z-index: 1;
+                            font-size: inherit;
+                        }
+                    }
+                    &::before, &::after {
+                        content: "";
+                        position: absolute;
+                        left: -0.25rem;
+                        right: -0.3125rem;
+                        cursor: $cursor-pointer;
+                    }
+                    &::before {
+                        top: 0;
+                        height: calc((2rem / 2) + 0.0625rem);
+                        transform: skew(28deg) translate3d(0, 0, 0);
+                    }
+                    &::after {
+                        bottom: 0;
+                        height: 1rem;
+                        transform: skew(-30deg) translate3d(0, 0, 0);
+                    }
+                    &.step-incomplete {
+                        &::before, &::after {
+                            background-color: $color-white-500;
+                        }
+                    }
+                    &.step-active {
+                        background-color: $color-blue-500;
+                        .wsp-step-title {
+                            color: $color-white;
+                        }
+                        &::before, &::after {
+                            background-color: $color-blue-500;
+                        }
+                        &:hover {
+                            background-color: $color-blue-600;
+                            &::before, &::after {
+                                background-color: $color-blue-600;
+                            }
+                        }
+                    }
+                    &.step-complete {
+                        background-color: $color-green-600;
+                        .wsp-step-title {
+                            color: $color-white;
+                        }
+                        &::before, &::after {
+                            background-color: $color-green-600;
+                        }
+                        &:hover {
+                            background-color: $color-green-700;
+                            &::before, &::after {
+                                background-color: $color-green-700;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        @include border-radius(2rem 0 0 2rem);
+                        padding-left: 0.625rem;
+                        &::before, &::after {
+                            left: 1.125rem;
+                        }
+                    }
+                    &:last-child {
+                        @include border-radius(0 2rem 2rem 0);
+                        padding-right: 0.625rem;
+                        &::before, &::after {
+                            right: 0.625rem;
+                        }
+                    }
+                    &:hover {
+                        background-color: $color-white-400;
+                        &::before, &::after {
+                            background-color: $color-white-400;
+                        }
+                    }
+                }
+            }
+            .patient-search {
+                input {
+                    width: auto;
+                }
+            }
+            .custom-icon-info {
+                color: $color-blue-400;
+            }
+            .app-patient-details {
+                .app-patient-details-head, .app-patient-details-body {
+                    background-color: $color-white-100;
+                    border: 1px solid $gray-400;
+                }
+                .app-patient-details-body {
+                    border-top: 0;
+                }
+            }
+            // Calendar 
+            .calendar {
+                margin: auto;
+                // min-width: 320px;
+                font-weight: 400;
+                background: $color-white;
+                // padding: 10px;
+                -webkit-box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+                -moz-box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+                box-shadow: 0px 4px 26px -22px rgba(0, 0, 0, 0.14);
+            }
+            .calendar_weekdays {
+                color: #aaa;
+                font-weight: 300;
+                position: relative;
+                div {
+                    display: inline-block;
+                    vertical-align: top;
+                    color: $color-black;
+                    font-weight: 700;
+                    width: 14.28571%;
+                    height: 68px;
+                    line-height: 69px;
+                    overflow: hidden;
+                    text-align: center;
+                    background-color: transparent;
+                }
+                &:after {
+                    content: ' ';
+                    display: table;
+                    clear: both;
+                }
+            }
+            .calendar_content {
+                position: relative;
+                &:after {
+                    content: ' ';
+                    display: table;
+                    clear: both;
+                }
+                div {
+                    width: 14.28571%;
+                    height: 68px;
+                    line-height: 69px;
+                    overflow: hidden;
+                    text-align: center;
+                    background-color: transparent;
+                    float: left;
+                    margin-left: -1px;
+                    margin-top: -1px;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    &:hover {
+                        border: 1px solid #ededed;
+                        cursor: pointer;
+                    }
+                }
+                div.blank {
+                    &:hover {
+                        cursor: default;
+                        border: none;
+                    }
+                }
+                div.past-date {
+                    cursor: initial;
+                    color: #d5d5d5;
+                }
+                div.today {
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $color-white;
+                    background-color: #34acb8;
+                }
+                div.selected {
+                    background-color: rgba(153, 153, 161, 0.2);
+                    border: 1px solid $color-white;
+                }
+            }
+            .calendar_header {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                height: 55px;
+                display: table;
+                vertical-align: middle;
+                &:after {
+                    content: ' ';
+                    display: table;
+                    clear: both;
+                }
+                h2 {
+                    margin-top: 15px;
+                    padding: 0;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $color-black !important;
+                    text-transform: uppercase;
+                }
+            }
+            button.switch-month {
+                background-color: transparent;
+                padding: 0;
+                outline: none;
+                border: none;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                color: #cccccc;
+                -webkit-transition: color .2s;
+                -o-transition: color .2s;
+                transition: color .2s;
+                cursor: $cursor-pointer;
+                &:hover {
+                    color: #bd83ce;
+                }
+                &:active {
+                    background-color: transparent;
+                }
+            }
+            button.switch-month.switch-left {
+                left: 0;
+            }
+            button.switch-month.switch-right {
+                right: 0;
+            }
+            .periods {
+                width: 100%;
+                display: flex;
+                background-color: #F7F7FA;
+                flex-direction: column;
+                padding: 24px;
+                border-radius: 15px;
+                p {
+                    font-size: 20px;
+                }
+            }
+            .date-selection {
+                display: flex;
+                margin-top: 10px;
+            }
+            .period {
+                padding: 7px;
+                margin-bottom: 5px;
+                text-align: center;
+                flex: 1;
+            }
+            .datelabel {
+                margin-bottom: 15px;
+            }
+            .timeslot {
+                background-color: transparent;
+                color: #6B7280;
+                padding: 12px;
+                font-size: 14px;
+                border-radius: 10px;
+                text-align: center;
+                border: 1px solid;
+                margin-bottom: 14px;
+                &:hover {
+                    background-color: #34acb8;
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+            .timeslot.disable {
+                background-color: #EAEAEA;
+                border-color: #EAEAEA;
+                cursor: not-allowed;
+                &:hover {
+                    color: #6B7280;
+                }
+            }            
+        }
+        footer {
+            .copyright {
+                font-size: $h6;
+            }
+        }
+    }
+}
+.wsp-modal-content {
+    .wsp-modal-header {
+        background-color: $color-theme-400;
+    }
+    .btn-primary {
+        @include btn-primary();
+    }
+    .btn-secondary {
+        @include btn-secondary();
+    }
+}
+
+// Media Query Starts Here
+// Mobile
+@media screen and (max-width: $small) {
+    .wrapper {
+        .sidebar {
+            width: 0;
+            &.toggle-enable {
+                width: 8rem;
+            }
+        }
+        .content-wrapper {
+            .content {
+                nav {
+                    .wsp-navbar-nav {
+                        .wsp-nav-item {
+                            &.notifications {
+                                .wsp-dropdown-menu {
+                                    min-width: 250px;
+                                    right: -50px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .patient-details-header {
+                    .actions-outer {
+                        position: absolute;
+                    }
+                }
+                .w-33 {
+                    width: 65%;
+                }
+                .date-selection {
+                    display: initial;
+                }
+                .booking-appointment-steps {
+                    .wsp-step {
+                        .wsp-step-bar {
+                            .wsp-step-title {
+                                max-width: 60px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .status-booked {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// Start Tablet
+@media screen and (min-width: $medium-min) {
+    .wrapper {
+        .sidebar {
+            width: 18rem;
+            &.toggle-enable {
+                width: 6.5rem;
+            }
+        }
+    }
+}
+// Start Tablet min and max
+@media screen and (min-width: $medium-min) and (max-width: $medium-max) {
+    .wrapper {
+        .w-33 {
+            width: 60%;
+        }
+        .content-wrapper {
+            .content {
+                .booking-appointment-steps {
+                    .wsp-step {
+                        .wsp-step-bar {
+                            .wsp-step-title {
+                                max-width: 100px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Desktop
+@media screen and (min-width: $extra-large-min) {
+    .wrapper {
+        .content-wrapper {
+            .content {
+                .wsp-table-responsive {
+                    table {
+                        table-layout: fixed;
+                        tr {
+                            td {
+                                max-width: 100%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .booking-appointment-steps {
+                    .status-booked {
+                        margin-left: 1.5rem;
+                    }
+                }
+                .patient-search {
+                    input {
+                        min-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
