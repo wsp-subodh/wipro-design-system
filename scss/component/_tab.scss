@@ -1,73 +1,183 @@
 .wsp-nav {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
-  .wsp-nav-tabs {
-    border-bottom: 1px solid $gray-400;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.wsp-nav-tabs {
+  border-bottom: 1px solid $gray-400;
 }
 .wsp-nav-link {
-    display: block;
-    padding: .5rem 1rem;
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: $dark;
+
+  @include hover-focus() {
     text-decoration: none;
-    color: $dark;
-  
-    @include hover-focus() {
-      text-decoration: none;
-    }
-  
-    // Disabled state lightens text
-    &.disabled {
-      color: $nav-link-disabled-color;
-      pointer-events: none;
-      cursor: default;
-    }
   }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
 //
 // Tabs
 //
 
 .wsp-nav-tabs {
-    border-bottom: 1px solid $light;
-  
-    .wsp-nav-link {
-      line-height: $line-height-base + 0.125;
-      border: transparent;
-      border-radius:0px;
-      padding-bottom: 11px;
-  
-      &.disabled {
-        color: $nav-link-disabled-color;
-        background-color: transparent;
-        border-color: transparent;
-      }
-    }
-    .wsp-nav-link.active {
-        color: $primary;
-        border-color: $primary;
-        border-bottom: 2px solid $primary;
-    }
-    .wsp-nav-item.show .wsp-nav-link {
-      color: $dark;
+  border-bottom: 1px solid $light;
+
+  .wsp-nav-link {
+    line-height: $line-height-base + 0.125;
+    border: transparent;
+    border-radius:0px;
+    padding-bottom: 11px;
+
+    &.disabled {
+      color: $nav-link-disabled-color;
       background-color: transparent;
-      
+      border-color: transparent;
     }
   }
-  .wsp-flex-column {
-    .wsp-nav-link.active {
-        color: $primary;
-        border-color: $primary;
-        border-left: 2px solid $primary;
-    }
+  .wsp-nav-link.active {
+      color: $primary;
+      border-color: $primary;
+      border-bottom: 2px solid $primary;
   }
+  .wsp-nav-item.show .wsp-nav-link {
+    color: $dark;
+    background-color: transparent;
+    
+  }
+}
+.wsp-flex-column {
+  .wsp-nav-link.active {
+      color: $primary;
+      border-color: $primary;
+      border-left: 2px solid $primary;
+  }
+}
 .wsp-nav.ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: $tab-margin-block-start;
-    margin-block-end: $tab-margin-block-end;
-    margin-inline-start: $tab-margin-inline-start;
-    margin-inline-end: $tab-margin-inline-end;
-    padding-inline-start: $tab-padding-inline-start;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: $tab-margin-block-start;
+  margin-block-end: $tab-margin-block-end;
+  margin-inline-start: $tab-margin-inline-start;
+  margin-inline-end: $tab-margin-inline-end;
+  padding-inline-start: $tab-padding-inline-start;
+}
+
+.wsp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid $gray-400;
+}
+
+.wsp-tab-link {
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: $dark;
+
+  @include hover-focus() {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.wsp-tabs {
+  border-bottom: 1px solid $light;
+
+  .wsp-tab-link {
+    line-height: $line-height-base + 0.125;
+    border: transparent;
+    border-radius: 0px;
+    padding-bottom: 11px;
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .wsp-tab-link.active {
+    color: $primary;
+    border-color: $primary;
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.wsp-tab-content {
+  display: none;
+  padding: .5rem 1rem;
+  border: 1px solid $light;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+//verticle tab
+.wsp-ver-tab-content-wrap{
+  display: flex;
+  column-gap: 20px;
+}
+.wsp-verticle-tab-link {
+  display: block;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: $dark;
+
+  @include hover-focus() {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.wsp-verticle-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  flex-direction: column;
+}
+.wsp-verticle-tab-link.active {
+  color: $primary;
+  border-color: $primary;
+  border-left: 2px solid $primary;
+}
+
+.wsp-verticle-tab-content {
+  display: none;
+  padding: .5rem 1rem;
+  border: 1px solid $light;
+  animation: fadeEffect 1s;
 }
