@@ -34,7 +34,8 @@
             </div>
             <div class="wsp-col-auto">
               <form class="wsp-form-inline">
-                <a type="button" href="https://wipro-design-system.herokuapp.com/wsp-design-system.zip" class="wsp-button button-outline-white button-sm">Download</a>
+                <a type="button" href="https://wipro-design-system.herokuapp.com/wsp-design-system.zip"
+                  class="wsp-button button-outline-white button-sm">Download</a>
               </form>
             </div>
           </div>
@@ -59,90 +60,141 @@
             <div class="wsp-col">
               <h1>Tabs</h1>
               <p>Tabs are used to separate content into different panes where each pane is viewable one at a time.
-                <br />Just add base class <span class="wsp-cls-name">.wsp-nav </span> or <span
-                  class="wsp-cls-name">.wsp-nav-tabs</span> to any ul , then extend with custom styles or our various
+                <br />Just add base class <span class="wsp-cls-name">.wsp-tabs </span> to any ul , then extend with custom styles or our various
                 included modifier classes.
               </p>
               <div class="ex-wrapper wsp-mb-5">
                 <h3>Example</h3>
                 <div class="demo">
-                  <ul class="wsp-nav wsp-nav-tabs">
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link active" href="#">Tab1</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link" href="#">Tab2</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link" href="#">Tab3</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link disabled" href="#">Tab4</a>
-                    </li>
-                  </ul>
+                  <div class="wsp-tab-content-wrap">
+                    <ul class="wsp-tabs">
+                      <li class="wsp-tab-item">
+                        <a class="wsp-tab-link active" id="defaultOpen" href="javascript:void(0)" onclick="openTab(event,'tab1')">Tab1</a>
+                      </li>
+                      <li class="wsp-tab-item">
+                        <a class="wsp-tab-link" href="javascript:void(0)" onclick="openTab(event,'tab2')">Tab2</a>
+                      </li>
+                      <li class="wsp-tab-item">
+                        <a class="wsp-tab-link" href="javascript:void(0)" onclick="openTab(event,'tab3')">Tab3</a>
+                      </li>
+                    </ul>
+                    <div id="tab1" class="wsp-tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis suscipit mauris. Aliquam
+                        rhoncus erat vel felis viverra, eget dignissim augue ullamcorper. Nulla malesuada ut ex pulvinar
+                        auctor. Aliquam erat volutpat. Nunc vitae rutrum urna, non porttitor velit. Vivamus eget cursus
+                        orci. Etiam eu risus a nisi interdum ultrices a ultricies quam. Vestibulum eu felis augue.
+                        Mauris ut sodales elit, non tempor justo. .</p>
+                    </div>
+                    <div id="tab2" class="wsp-tab-content">
+                      <p>Proin in sagittis odio, vel aliquam mauris. Sed eget erat urna. Orci varius natoque penatibus
+                        et magnis dis parturient montes, nascetur ridiculus mus. Mauris sed urna elit. Mauris vestibulum
+                        nibh purus, tristique dictum lacus vulputate sed. Integer at facilisis lacus. Fusce malesuada
+                        diam.nascetur ridiculus mus. Mauris sed urna elit. </p>
+                    </div>
+                    <div id="tab3" class="wsp-tab-content">
+                      <p>Pellentesque eu blandit diam. Etiam bibendum, dolor nec aliquet viverra, augue ante lacinia
+                        dolor, quis finibus felis leo vitae eros. Sed sagittis, leo vel mattis consectetur, magna dolor
+                        sollicitudin diam, quis consequat tortor risus sit amet eros. Cras ante nibh, vulputate non
+                        augue laoreet, laoreet ultricies sapien.</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(horizontalTabs)">
                     Copy
                   </span>
                   <code id="horizontalTabs" class="language-html">
-                      &lt;ul <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav wsp-nav-tabs"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link active"</span> href="#"&gt;Tab1&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link"</span> href="#"&gt;Tab2&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link"</span> href="#"&gt;Tab3&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link disabled"</span> href="#"&gt;Tab4&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &lt;ul&gt;
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-content-wrap"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tabs"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-item"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-link active"</span> <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"defaultOpen"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openTab(event,'tab1')</span>&gt; Tab1 &lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-item"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-link"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openTab(event,'tab2')</span>&gt; Tab2 &lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-item"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-link"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openTab(event,'tab3')</span>&gt; Tab3 &lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"tab1"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-content"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis suscipit mauris.&lt;/p&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"tab2"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-content"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Proin in sagittis odio, vel aliquam mauris. Sed eget erat urna. Orci varius natoque penatibus et.&lt;/p&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"tab3"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-tab-content"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Pellentesque eu blandit diam. Etiam bibendum, dolor nec aliquet viverra.&lt;/p&gt;</br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                      &lt;/div&gt;
                   </code>
                 </div>
               </div>
 
-              <div class="ex-wrapper">
+              <div class="ex-wrapper wsp-mb-5">
                 <h3>Vertical Tabs</h3>
-                <p>Add the <span class="wsp-cls-name">.wsp-flex-column</span> class to create a vertical nav.
+                <p>Add the <span class="wsp-cls-name">.wsp-verticle-tabs</span> class to create a vertical nav.
                 </p>
                 <div class="demo">
-                  <ul class="wsp-nav wsp-flex-column">
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link active" href="#">Tab1</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link" href="#">Tab2</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link" href="#">Tab3</a>
-                    </li>
-                    <li class="wsp-nav-item">
-                      <a class="wsp-nav-link disabled" href="#">Tab4</a>
-                    </li>
-                  </ul>
+                  <div class="wsp-ver-tab-content-wrap">
+                    <ul class="wsp-verticle-tabs">
+                      <li class="wsp-verticle-tab-item">
+                        <a class="wsp-verticle-tab-link active" id="defaultverOpen" href="javascript:void(0)" onclick="openverTab(event,'vertab1')">Tab1</a>
+                      </li>
+                      <li class="wsp-verticle-tab-item">
+                        <a class="wsp-verticle-tab-link" href="javascript:void(0)" onclick="openverTab(event,'vertab2')">Tab2</a>
+                      </li>
+                      <li class="wsp-verticle-tab-item">
+                        <a class="wsp-verticle-tab-link" href="javascript:void(0)" onclick="openverTab(event,'vertab3')">Tab3</a>
+                      </li>
+                    </ul>
+                    <div id="vertab1" class="wsp-verticle-tab-content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis suscipit mauris. Aliquam
+                        rhoncus erat vel felis viverra, eget dignissim augue ullamcorper. Nulla malesuada ut ex pulvinar
+                        auctor. Aliquam erat volutpat. Nunc vitae rutrum urna, non porttitor velit. Vivamus eget cursus
+                        orci. Etiam eu risus a nisi interdum ultrices a ultricies quam. Vestibulum eu felis augue.
+                        Mauris ut sodales elit, non tempor justo. .</p>
+                    </div>
+                    <div id="vertab2" class="wsp-verticle-tab-content">
+                      <p>Proin in sagittis odio, vel aliquam mauris. Sed eget erat urna. Orci varius natoque penatibus
+                        et magnis dis parturient montes, nascetur ridiculus mus. Mauris sed urna elit. Mauris vestibulum
+                        nibh purus, tristique dictum lacus vulputate sed. Integer at facilisis lacus. Fusce malesuada
+                        diam.nascetur ridiculus mus. Mauris sed urna elit. </p>
+                    </div>
+                    <div id="vertab3" class="wsp-verticle-tab-content">
+                      <p>Pellentesque eu blandit diam. Etiam bibendum, dolor nec aliquet viverra, augue ante lacinia
+                        dolor, quis finibus felis leo vitae eros. Sed sagittis, leo vel mattis consectetur, magna dolor
+                        sollicitudin diam, quis consequat tortor risus sit amet eros. Cras ante nibh, vulputate non
+                        augue laoreet, laoreet ultricies sapien.</p>
+                    </div>
+                  </div>
                 </div>
                 <div class="code">
                   <span class="copy-clipboard" onclick="copyToClipboard(verticalTabs)">
                     Copy
                   </span>
                   <code id="verticalTabs" class="language-html">
-                      &lt;ul <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav wsp-flex-column"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link active"</span> href="#"&gt;Tab1&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link"</span> href="#"&gt;Tab2&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link"</span> href="#"&gt;Tab3&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-item"</span>&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-nav-link disabled"</span> href="#"&gt;Tab4&lt;/a&gt;<br/>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
-                      &lt;ul&gt;
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-ver-tab-content-wrap"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tabs"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-item"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-link active"</span> <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"defaultOpen"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openverTab(event,'vertab1')</span>&gt; Tab1 &lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-item"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-link"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openverTab(event,'vertab2')</span>&gt; Tab2 &lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-item"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-link"</span> href="javascript:void(0)" <span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name"> openverTab(event,'vertab3')</span>&gt; Tab3 &lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"vertab1"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-content"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis suscipit mauris.&lt;/p&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"vertab2"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-content"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Proin in sagittis odio, vel aliquam mauris. Sed eget erat urna. Orci varius natoque penatibus et.&lt;/p&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">id=</span><span class="wsp-cls-name">"vertab3"</span> <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-verticle-tab-content"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Pellentesque eu blandit diam. Etiam bibendum, dolor nec aliquet viverra.&lt;/p&gt;</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</br>
+                    &lt;/div&gt;
                   </code>
                 </div>
               </div>

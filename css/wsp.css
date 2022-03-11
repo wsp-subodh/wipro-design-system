@@ -6667,6 +6667,140 @@ fieldset:disabled a.btn {
           padding-inline-start: 2.5;
 }
 
+.wsp-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 1px solid #A0AEC0;
+}
+
+.wsp-tab-link {
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.wsp-tab-link:hover, .wsp-tab-link:focus {
+  text-decoration: none;
+}
+
+.wsp-tab-link.disabled {
+  color: #CCCCCC;
+  pointer-events: none;
+  cursor: default;
+}
+
+.wsp-tabs {
+  border-bottom: 1px solid #e9e9ef;
+}
+
+.wsp-tabs .wsp-tab-link {
+  line-height: 1.625;
+  border: transparent;
+  border-radius: 0px;
+  padding-bottom: 11px;
+}
+
+.wsp-tabs .wsp-tab-link.disabled {
+  color: #CCCCCC;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.wsp-tabs .wsp-tab-link.active {
+  color: #5156BE;
+  border-color: #5156BE;
+  border-bottom: 2px solid #5156BE;
+}
+
+.wsp-tab-content {
+  display: none;
+  padding: .5rem 1rem;
+  border: 1px solid #e9e9ef;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wsp-ver-tab-content-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.wsp-verticle-tab-link {
+  display: block;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.wsp-verticle-tab-link:hover, .wsp-verticle-tab-link:focus {
+  text-decoration: none;
+}
+
+.wsp-verticle-tab-link.disabled {
+  color: #CCCCCC;
+  pointer-events: none;
+  cursor: default;
+}
+
+.wsp-verticle-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wsp-verticle-tab-link.active {
+  color: #5156BE;
+  border-color: #5156BE;
+  border-left: 2px solid #5156BE;
+}
+
+.wsp-verticle-tab-content {
+  display: none;
+  padding: .5rem 1rem;
+  border: 1px solid #e9e9ef;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
+}
+
 .wsp-form-control {
   display: block;
   width: 100%;

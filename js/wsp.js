@@ -657,3 +657,48 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
+
+//Tabs
+document.getElementById("defaultOpen").click();
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("wsp-tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("wsp-tab-link");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+//Verticle Tabs
+function openverTab(evt, tabverName) {
+  // Declare all variables
+  var i, tabvercontent, tabverlinks;
+
+  // Get all elements with class="tabvercontent" and hide them
+  tabvercontent = document.getElementsByClassName("wsp-verticle-tab-content");
+  for (i = 0; i < tabvercontent.length; i++) {
+    tabvercontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tabverlinks" and remove the class "active"
+  tabverlinks = document.getElementsByClassName("wsp-verticle-tab-link");
+  for (i = 0; i < tabverlinks.length; i++) {
+    tabverlinks[i].className = tabverlinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabverName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultverOpen").click();
