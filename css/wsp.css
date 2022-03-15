@@ -10333,6 +10333,12 @@ input::-moz-focus-outer {
   }
 }
 
+@media (max-width: 480px) {
+  .wsp-logo-wrapper h4 {
+    font-size: 1rem;
+  }
+}
+
 .demo {
   margin: 0;
 }
