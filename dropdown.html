@@ -58,39 +58,248 @@
           <div class="wsp-row">
             <div class="wsp-col">
               <h1>Dropdown</h1>
-              <p>A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list.
-              </p>
+              <p>A dropdown menu is a toggleable menu that allows the user to choose one value from a predefined list.</p>
               <div class="ex-wrapper wsp-mb-5">
-
+                
                 <div class="demo">
-                  <div class="wsp-dropdown">
-                    <button class="wsp-button button-primary wsp-dropdown-toggle">
-                      Dropdown button <i class="wsp-icon wsp-icon-down-small"></i>
-                    </button>
-                    <div class="wsp-dropdown-menu wsp-drop">
-                      <a class="wsp-dropdown-item" href="#">Link 1</a>
-                      <a class="wsp-dropdown-item" href="#">Link 2</a>
-                      <a class="wsp-dropdown-item" href="#">Link 3</a>
+                    <div class="wsp-dropdown">
+                        <button onclick="dropdownFunction()" class="wsp-button button-primary wsp-dropdown-toggle" >
+                          Dropdown button 1
+                        </button>
+                        <div class="wsp-dropdown-menu" id="wsp-drop">
+                          <ul>
+                            <li><a class="wsp-dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="wsp-dropdown-item" href="#">Option 2</a></li>
+                            <li><a class="wsp-dropdown-item" href="#">Option 3</a></li>
+                          </ul>
+                          
+                        </div>
                     </div>
-                  </div>
                 </div>
                 <div class="code">
-                  <span class="copy-clipboard" onclick="copyToClipboard(input)">
+                  <span class="copy-clipboard" onclick="copyToClipboard(dropdownoption)">
                     Copy
                   </span>
-                  <code id="input" class="language-html">
+                    <code id="dropdownoption" class="language-html">
                     &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown"</span>&gt;<br/>
-                    &nbsp;&nbsp;&nbsp;&lt;button <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-button button-primary wsp-dropdown-toggle"</span>&gt;Dropdown button &lt;/button&gt;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-menu wsp-drop"</span>&gt;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Link 1&lt;/a&gt;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Link 2&lt;/a&gt;<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Link 3&lt;/a&gt;<br/>                              
+                    &nbsp;&nbsp;&nbsp;&lt;button <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-button button-primary wsp-dropdown-toggle" </span><span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name">"dropdownFunction()"</span>&gt; Dropdown button &lt;/button&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-menu"</span><span class="wsp-cls-text"> id=</span><span class="wsp-cls-name">"wsp-drop"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Option 1&lt;/a&gt;&lt;/li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Option 2&lt;/a&gt;&lt;/li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;Option 3&lt;/a&gt;&lt;/li&gt;<br/>                              
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                    &lt;/div&gt;
+                    </code>
+                </div>
+              </div>
+              
+              <div class="ex-wrapper wsp-mb-5">
+                
+                <div class="demo">
+                    <div class="wsp-dropdown">
+                        <button onclick="dropdownavtarFunction()" class="wsp-button button-primary wsp-dropdown-toggle" >
+                          Dropdown button 2
+                        </button>
+                        <div class="wsp-dropdown-menu" id="wsp-drop1">
+                          <ul>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 2
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 3
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(dropavtar)">
+                    Copy
+                  </span>
+                    <code id="dropavtar" class="language-html">
+                    &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&lt;button <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-button button-primary wsp-dropdown-toggle" </span><span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name">"dropdownavtarFunction()"</span>&gt; Dropdown button &lt;/button&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-menu"</span><span class="wsp-cls-text"> id=</span><span class="wsp-cls-name">"wsp-drop"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 3<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
                     &lt;/div&gt;
                     </code>
                 </div>
               </div>
 
+              <div class="ex-wrapper wsp-mb-5">
+                
+                <div class="demo">
+                    <div class="wsp-dropdown">
+                        <button onclick="dropdowngroupFunction()" class="wsp-button button-primary wsp-dropdown-toggle" >
+                          Dropdown button 3
+                        </button>
+                        <div class="wsp-dropdown-menu" id="wsp-drop2">
+                          <ul>
+                            <li class="wsp-dropdown-header">Dropdown header 1</li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 2
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 3
+                              </a>
+                            </li>
+                            <li class="wsp-dropdown-header">Dropdown header 2</li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 1
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 2
+                              </a>
+                            </li>
+                            <li>
+                              <a class="wsp-dropdown-item" href="#">
+                                <span class="wsp-avatar wsp-avatar-xs rounded-circle">
+                                  <img alt="Image placeholder" src="./images/photo/team-4.jpeg">
+                                </span>
+                                Option 3
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="code">
+                  <span class="copy-clipboard" onclick="copyToClipboard(dropdowngroup)">
+                    Copy
+                  </span>
+                    <code id="dropdowngroup" class="language-html">
+                      &lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&lt;button <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-button button-primary wsp-dropdown-toggle" </span><span class="wsp-cls-text">onclick=</span><span class="wsp-cls-name">"dropdowngroupFunction()"</span>&gt; Dropdown button &lt;/button&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;div <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-menu"</span><span class="wsp-cls-text"> id=</span><span class="wsp-cls-name">"wsp-drop"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-header"</span>&gt;Dropdown Header1&lt;/li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 3<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-header"</span>&gt;Dropdown Header2&lt;/li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-dropdown-item"</span> <span class="wsp-cls-text">href=</span><span class="wsp-cls-name">"#"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span <span class="wsp-cls-text">class=</span><span class="wsp-cls-name">"wsp-avatar wsp-avatar-xs rounded-circle"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img <span class="wsp-cls-text">alt=</span><span class="wsp-cls-name">"Image placeholder"</span><span class="wsp-cls-text">src=</span><span class="wsp-cls-name">"./images/photo/team-4.jpeg"</span>&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 3<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+                      &lt;/div&gt;
+                    </code>
+                </div>
+              </div>
             </div>
           </div>
         </div>

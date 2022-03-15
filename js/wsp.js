@@ -619,13 +619,68 @@ $(document).ready(function () {
     showArrows: "on",
     hideDots: "off"
   });
-
-  //Dropdown
-  $(".wsp-dropdown-toggle").click(function () {
-    $(this).next(".wsp-drop").toggle(500);
-  });
 });
 
+(function ($) {
+  $(function () {
+
+    //  open and close nav
+    $('#wsp-navbar-toggler').click(function () {
+      $('.wsp-navbar-collapse#collapsibleNavbar').slideToggle();
+    });
+
+    // Hamburger toggle
+    $('#wsp-navbar-toggler').on('click', function () {
+      this.classList.toggle('active');
+    });
+
+    // Dark background
+    $('#wsp-navbar-toggler1').click(function () {
+      $('.wsp-navbar-collapse#collapsibleNavbar1').slideToggle();
+    });
+
+    // Hamburger toggle
+    $('#wsp-navbar-toggler1').on('click', function () {
+      this.classList.toggle('active');
+    });
+
+    //Primary background
+    // Dark background
+    $('#wsp-navbar-toggler2').click(function () {
+      $('.wsp-navbar-collapse#collapsibleNavbar2').slideToggle();
+    });
+
+    // Hamburger toggle
+    $('#wsp-navbar-toggler2').on('click', function () {
+      this.classList.toggle('active');
+    });
+
+
+    // If a link has a dropdown, add sub menu toggle.
+    $('.wsp-navbar-collapse ul li .wsp-nav-link:not(:only-child)').click(function (e) {
+      $(this).siblings('.wsp-navbar-dropdown').slideToggle("slow");
+
+      // Close dropdown when select another dropdown
+      $('.wsp-navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+
+
+    // Click outside the dropdown will remove the dropdown class
+    $('html').click(function () {
+      $('.wsp-navbar-dropdown').hide();
+    });
+  });
+})(jQuery);
+function dropdownFunction() {
+  document.getElementById("wsp-drop").classList.toggle("show");
+}
+function dropdownavtarFunction() {
+  document.getElementById("wsp-drop1").classList.toggle("show");
+}
+function dropdowngroupFunction() {
+  document.getElementById("wsp-drop2").classList.toggle("show");
+}
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches('.wsp-dropdown-toggle')) {

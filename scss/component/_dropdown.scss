@@ -3,6 +3,21 @@
 }
 .wsp-dropdown-toggle {
   white-space: nowrap;
+  padding-right: 35px;
+  position: relative;
+  &::after {
+    content: '\ec95';
+    font-family: 'wsp-icon';
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position:absolute;
+    top: 12px;
+    right: 12px;
+  }
 }
 .wsp-dropdown-menu {
   position: absolute;
@@ -23,6 +38,11 @@
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($dropdown-border-radius);
   @include box-shadow($dropdown-box-shadow);
+
+  ul {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
