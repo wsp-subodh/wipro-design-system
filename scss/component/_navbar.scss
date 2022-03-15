@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   padding: $navbar-padding-y $navbar-padding-x;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 
   %container-flex-properties {
     display: flex;
@@ -16,6 +19,11 @@
   .container,
   .container-fluid {
     @extend %container-flex-properties;
+  }
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+      @extend %container-flex-properties;
+    }
   }
 }
 
@@ -44,6 +52,12 @@
   .wsp-nav-link {
     padding-right: 0;
     padding-left: 0;
+    &:not(:only-child) {
+      &::after {
+        padding-left: 4px;
+        content: ' \025BE';
+      }
+    }
   }
 
   .wsp-dropdown-menu {
@@ -69,8 +83,6 @@
   font-size:$navbar-toggler-font-size;
   line-height: 1;
   background-color: transparent; 
-  border: $border-width solid transparent; 
-  border-radius: $navbar-toggler-border-radius;
 
   @include hover-focus() {
     text-decoration: none;
@@ -84,7 +96,56 @@
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
-  background-size: 100% 100%;
+  background-size: 50% / 100% 100% no-repeat;
+}
+.nav-toggler {
+  position: relative;
+  cursor: pointer;
+  color: $dark;
+  top: 6px;
+  z-index: 1028;
+  display: none;
+}
+
+.navbar-toggler-bar,
+.navbar-toggler-bar::before,
+.navbar-toggler-bar::after,
+.nav-toggler.active .navbar-toggler-bar,
+.nav-toggler.active .navbar-toggler-bar::before,
+.nav-toggler.active .navbar-toggler-bar::after {
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-toggler-bar {
+  width: 35px;
+  margin: 10px 0;
+  position: relative;
+  border-top: 4px solid $dark;
+  display: block;
+  border-radius: 4px;
+}
+
+.navbar-toggler-bar::before,
+.navbar-toggler-bar::after {
+  content: "";
+  display: block;
+  background: $dark;
+  height: 4px;
+  width: 35px;
+  border-radius: 4px;
+  position: absolute;
+  top: -12px;
+  transform: rotate(0deg);
+  transform-origin: 11%;
+}
+
+.navbar-toggler-bar::after {
+  top: 4px;
+}
+
+.wsp-navbar-nav-scroll {
+  max-height: $navbar-nav-scroll-max-height;
+  overflow-y: auto;
 }
 
 .wsp-navbar-light {
@@ -121,6 +182,7 @@
     color: $navbar-light-color;
     border-color: $navbar-light-toggler-border-color;
   }
+  
 
   .wsp-navbar-text {
     color: $navbar-light-color;
@@ -147,6 +209,7 @@
   .wsp-navbar-nav {
     .wsp-nav-link {
       color: $navbar-dark-color;
+      
 
       @include hover-focus() {
         color: $navbar-dark-hover-color;
@@ -167,7 +230,6 @@
 
   .wsp-navbar-toggler {
     color: $navbar-dark-color;
-    border-color: $navbar-dark-toggler-border-color;
   }
 
   .wsp-navbar-text {
@@ -197,6 +259,18 @@
   }
 }
 .wsp-bg-dark-gray,.wsp-bg-primary {
+  .nav-toggler {
+    color:$white;
+    .navbar-toggler-bar {
+      border-top-color: $white;
+      &::after{
+        background:$white;
+      }
+      &::before {
+        background:$white;
+      }
+    }
+  }
   .wsp-navbar-nav {
     .wsp-nav-item {
       margin-right: 4rem - 0.25rem;
@@ -249,12 +323,28 @@
     color:$black;
   }
 }
+.wsp-navbar-dropdown{
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background: $white;
+  padding-left: 0px;
+  box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+  li {
+    min-width: 190px;
+    padding: 15px;
+    a {
+      line-height: 20px;
+      margin: 0px;
+      color: $dark;
+      text-decoration: none;
+    }
+  }
+}
 .wsp-nav-profile {
   margin: $margin-avtar !important;
 }
-.wsp-flex {
-  display: flex;
-}
+
 .wsp-navbar-expand-sm {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -275,4 +365,364 @@
         display: flex !important;
         flex-basis: auto;
       }
+}
+.wsp-navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        %container-navbar-expand-#{$breakpoint} {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        > .container,
+        > .container-fluid {
+          @extend %container-navbar-expand-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-navbar-expand-#{$breakpoint};
+          }
+        }
+      }
+
+      @include media-breakpoint-up($next) {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        .wsp-navbar-nav {
+          flex-direction: row;
+
+          .wsp-dropdown-menu {
+            position: absolute;
+          }
+
+          .wsp-nav-link {
+            padding-right: $navbar-nav-link-padding-x;
+            padding-left: $navbar-nav-link-padding-x;
+          }
+        }
+
+        // For nesting containers, have to redeclare for alignment purposes
+        %container-nesting-#{$breakpoint} {
+          flex-wrap: nowrap;
+        }
+
+        > .wsp-container,
+        > .wsp-container-fluid {
+          @extend %container-nesting-#{$breakpoint};
+        }
+
+        @each $size, $container-max-width in $container-max-widths {
+          > .wsp-container#{breakpoint-infix($size, $container-max-widths)} {
+            @extend %container-nesting-#{$breakpoint};
+          }
+        }
+
+        .wsp-navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .wsp-navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+
+          // Changes flex-bases to auto because of an IE10 bug
+          flex-basis: auto;
+        }
+
+        .wsp-navbar-toggler {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px)
+{
+  
+  .wsp-navbar .wsp-navbar-collapse .wsp-form-inline {
+    margin: 0px 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .wsp-navbar .wsp-navbar-collapse .wsp-form-inline {
+    margin: 15px 0px;
+  }
+  .wsp-navbar-collapse {
+    display: none; 
+  }
+}
+@media screen and (max-width: 1400px)
+{
+  .wsp-bg-gray .wsp-navbar-nav .wsp-nav-item, .wsp-bg-dark-gray .wsp-navbar-nav .wsp-nav-item, .wsp-bg-primary .wsp-navbar-nav .wsp-nav-item{
+    margin-right: 0.75rem;
+  }
+  .wsp-logo {
+    margin-right: 1.5rem;
+  }
+  
+}
+
+// Navbar Css
+.wsp-navigation {
+  position: relative;
+  padding: 0.5rem 1rem;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+
+  .wsp-brand {
+    position: relative;
+    float: left;
+    line-height: 55px;
+    text-transform:capitalize;
+    font-size: 1.75em;
+    a {
+      color: #000;
+      text-decoration: none;
+      &:visited {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+  .wsp-nav-container {
+    // max-width: 1000px;
+    // margin: 0 auto;
+    display: flex;
+    .wsp-nav {
+      width: 100%;
+      .wsp-navbar-nav {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      
+        .wsp-nav-link {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      
+        .wsp-dropdown-menu {
+          position: static;
+          float: none;
+        }
+      }
+      .open-close {
+        width:100%;
+      }
+      ul{
+        list-style: none;
+        margin-bottom: 0px;
+        padding: 0;
+        position:relative;
+        z-index: 999;
+
+        
+        li {
+          position: relative;
+          a{
+            line-height: 1.70rem;
+            color: #000;
+            display: block;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            line-height: 55px;
+            text-decoration: none;
+            &:visited {
+              display: block;
+              padding: 0 20px;
+              line-height: 55px;
+              color: #000;
+              background: #262626 ;
+              text-decoration: none;
+              &:hover {
+                background: #2581DC;
+                color: #000;
+              }
+              &:not(:only-child) {
+                &::after {
+                  padding-left: 4px;
+                  content: ' \025BE';
+                }
+              }
+            }
+            &:hover {
+              background: #2581DC;
+              color: #ffffff;
+            }
+            &:not(:only-child) {
+              &::after {
+                padding-left: 4px;
+                content: ' \025BE';
+              }
+            }
+          }
+          .wsp-navbar-dropdown{
+            position: absolute;
+            display: none;
+            z-index: 1;
+            background: #fff;
+            box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+            li {
+              min-width: 190px;
+              a {
+                background: #2581DC;
+                padding: 15px;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+        
+      }
+      .wsp-flex {
+        display: flex;
+      }
+      .wsp-nav-mobile {
+        display: none;
+        position:absolute;
+        top: 17px;
+        right: 0;
+        background: transparent;
+        height: 55px;
+        width: 70px;
+      }
+      #wsp-navbar-toggle {
+        position: absolute;
+        left: 18px;
+        top: 15px;
+        cursor: pointer;
+        padding: 10px 35px 16px 0px;
+
+        span {
+          cursor: pointer;
+          border-radius: 1px;
+          height: 3px;
+          width: 30px;
+          background: #000;
+          position: absolute;
+          display: block;
+          content: '';
+          transition: all 300ms ease-in-out;
+          &::before {
+            cursor: pointer;
+            border-radius: 1px;
+            height: 3px;
+            width: 30px;
+            background: #000;
+            position: absolute;
+            display: block;
+            content: '';
+            transition: all 300ms ease-in-out;
+            top: -10px;
+          }
+          &::after {
+            cursor: pointer;
+            border-radius: 1px;
+            height: 3px;
+            width: 30px;
+            background: #000;
+            position: absolute;
+            display: block;
+            content: '';
+            transition: all 300ms ease-in-out;
+            bottom: -10px;
+          }
+        }
+      }
+      #wsp-navbar-toggle.active {
+        span {
+          background-color: transparent;
+          &::before {
+            top:0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top:0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+@media screen and (min-width: 993px) and (max-width: 1440px){
+      .wsp-nav-list {
+          display: flex;
+    }
+    .wsp-nav ul li {
+      margin-right: 3.75rem;
+    }
+    .open-close {
+      width:auto;
+    }
+}
+// @media screen and (min-width: 993px) and (max-width: 1199px){
+  
+// }
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .wsp-navbar-collapse {
+    display:none;
+  }
+  .nav-toggler {
+    display:block;
+  }
+      .wsp-navigation .wsp-nav-container .wsp-nav .wsp-nav-mobile {
+          display: block;
+    }
+    
+      .wsp-brand {
+        position:absolute;
+      }
+      .wsp-nav {
+          width: 100%;
+          padding: 55px 0 15px;
+          float: right;
+    }
+    .wsp-nav ul {
+      width: 100%;
+    }
+   
+    .open-close {
+      display:none;
+    }
+      .wsp-nav ul li {
+          float: none;
+    }
+      .wsp-nav ul li a {
+          padding: 15px;
+          line-height: 20px;
+          background: #262626;
+    }
+      .wsp-nav ul li ul li a {
+          padding-left: 30px;
+    }
+      .wsp-navbar-dropdown {
+          position: static;
+    }
+    .wsp-nav-profile {
+      margin: 10px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+  .wsp-flex {
+    flex-flow: inherit !important;
+    .wsp-search {
+      margin-right:10px;
+      input {
+        width:140px;
+      }
+    }
+  }
 }
