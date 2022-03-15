@@ -197,9 +197,6 @@
             max-width: 100%;
         }
     }
-
-   
-
     .wsp-content .wsp-content-wrap .wsp-card-wrap .wsp-card {
         margin-bottom: 1rem;
     }
@@ -222,3 +219,9 @@
         padding-top: 0 !important;
     }
 }
+@media (max-width: 480px) {
+    .wsp-logo-wrapper h4{
+        font-size: 1rem;
+    }
+}
+
