@@ -86,9 +86,6 @@ class MySidebar extends HTMLElement {
                 <a href="flag.html">Flag</a>
                 </li>
                 <li class="wsp-nav-link">
-                <a href="flex.html">Flex</a>
-                </li>
-                <li class="wsp-nav-link">
                 <a href="list-group.html">List Group</a>
                 </li>
                 <li class="wsp-nav-link">
